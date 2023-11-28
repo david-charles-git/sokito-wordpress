@@ -1,0 +1,28 @@
+Assests / Information Required :
+    n/a
+    
+Requiremnts :
+    container :
+        The max width of the content is as per style guide
+        The content is split into two asymemtrical columns on desktop and tablet - title left, image right
+        The content is contained within a single column on mobile - title top, image bottom
+    
+    title :
+        This will be a h3 tag - the font size and style of a h3 in the style guide is incorrect for this container, therefore I have given it the classes font-large and font-body to make it the given font style of an large body element (see style guide)
+        The max width of this container is 420px
+        The color of the title is white (#000000)
+
+    image :
+        The image would ideally be served in a webp format for better compression and perfomance.
+        The image should be in a 16 / 9 aspect ratio.
+        The max-width of the image will be 870px
+        On desktop and tablet the image container's height is capped: min- 400px.
+        On mobile the image container's height is capped: min- 270px.
+        The image should be accompanied by an alt tag for screen reader and seo performace.
+
+Variables Required ( for dev ) :
+    hasCustomClass
+    customclass
+    title
+    imageSource
+    imageAlt

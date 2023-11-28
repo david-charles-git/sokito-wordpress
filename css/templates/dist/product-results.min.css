@@ -1,0 +1,927 @@
+#productResultsFeed > .inner .filterContainer {
+	width: 100%;
+	max-width: 1440px;
+	padding: 0 clamp(20px, 5vw, 50px);
+	grid-template-columns: auto 1fr auto;
+	grid-template-areas: "filterButton filters sortButton" "activeFilters activeFilters activeFilters";
+	position: relative;
+}
+
+#productResultsFeed > .inner .filterContainer .filterButton {
+	grid-area: filterButton;
+}
+
+#productResultsFeed > .inner .filterContainer .filterButton button {
+	padding: 20px 0;
+	padding-right: clamp(10px, 2vw, 20px);
+}
+
+#productResultsFeed > .inner .filterContainer .filterButton button svg {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#productResultsFeed > .inner .filterContainer .filterButton button .text {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: GZA;
+	font-size: 15px;
+	margin-left: 5px;
+	color: #000;
+}
+
+#productResultsFeed > .inner .filterContainer .filterButton button .text::before {
+	content: "Show";
+	font-family: GZA;
+	font-size: 15px;
+	margin-right: 5px;
+	color: #000;
+}
+
+#productResultsFeed > .inner .filterContainer .filterButton.active button .text {
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .filterButton.active button .text::before {
+	content: "Hide";
+}
+
+#productResultsFeed > .inner .filterContainer .filters {
+	grid-area: filters;
+	width: 100%;
+	max-width: 0%;
+	height: 0;
+	overflow: hidden;
+}
+
+#productResultsFeed > .inner .filterContainer .filters.active {
+	max-width: 100%;
+	height: auto;
+	overflow: visible;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul {
+	justify-content: start;
+	grid-template-columns: repeat(5, auto);
+	margin: 0;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul > .closeButton,
+#productResultsFeed > .inner .filterContainer .filters ul .title {
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter {
+	border-left: 1px solid #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter:last-child {
+	border-right: 1px solid #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter > button p {
+	transition: background 0.2s ease-in-out;
+	padding: 20px clamp(10px, 2vw, 20px);
+	font-family: Gza;
+	font-size: 15px;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter > button p span {
+	font-family: Gza;
+	font-size: 15px;
+	color: #727272;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter > button p svg {
+	transition: rotate 0.2s ease-in-out;
+	margin-left: 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter > button:hover p {
+	background-color: #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown {
+	position: absolute;
+	z-index: 2;
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown .closeButton {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown.active {
+	display: block;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown.active > .background {
+	display: block;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner {
+	border-radius: 0 0 8px 8px;
+	background: #fff;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+	padding: 20px 5px;
+	padding: 20px 30px 20px 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption {
+	margin-bottom: 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption:last-child {
+	margin-bottom: 0;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button {
+	padding: 0.5em 1em;
+	transition: background 0.2s ease-in-out;
+	width: 100%;
+	text-align: left;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button .checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #000;
+	border-radius: 4px;
+	margin-right: 5px;
+	position: relative;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button .checkbox .check {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	opacity: 0;
+	scale: 0.6;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button p,
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button a {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: Gza;
+	font-size: 15px;
+	text-transform: capitalize;
+	color: #000;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button p .count,
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button a .count {
+	font-family: "Univers LT Roman";
+	font-size: 15px;
+	color: #727272;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button p .count::after,
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button a .count::after {
+	content: attr(data-count);
+	font-family: "Univers LT Roman";
+	font-size: 15px;
+	color: #727272;
+	margin-left: 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption:hover button {
+	background-color: #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption.active button {
+	background-color: #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption.active .checkbox .check {
+	opacity: 1;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .filter.active button p svg,
+#productResultsFeed > .inner .filterContainer .filters ul .filter.active button a svg {
+	rotate: 180deg;
+}
+
+#productResultsFeed > .inner .filterContainer .filters ul .mobile-filter-buttons {
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .sortButton {
+	grid-area: sortButton;
+}
+
+#productResultsFeed > .inner .filterContainer .sortButton button {
+	padding: 20px 0;
+	padding-left: clamp(10px, 2vw, 20px);
+}
+
+#productResultsFeed > .inner .filterContainer .sortButton button svg {
+	display: inline-block;
+	vertical-align: middle;
+	transition: rotate 0.2s ease-in-out;
+}
+
+#productResultsFeed > .inner .filterContainer .sortButton button .text {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+	font-family: Gza;
+	font-size: 15px;
+	color: #000;
+}
+
+#productResultsFeed > .inner .filterContainer .sortButton.active button svg {
+	rotate: 180deg;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer {
+	display: none;
+	position: absolute;
+	max-width: 0%;
+	height: 0;
+	overflow: hidden;
+	width: auto;
+	right: clamp(20px, 5vw, 50px);
+	z-index: 3;
+	top: 64px;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer.active {
+	max-width: 100%;
+	height: auto;
+	overflow: visible;
+	display: block;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer.active > .background {
+	display: block;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer .closeButton {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner {
+	border-radius: 0 0 8px 8px;
+	background: #fff;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+	padding: 20px 5px;
+	padding: 20px 30px 20px 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner > .closeButton,
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner .title {
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li {
+	margin-bottom: 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li:last-child {
+	margin-bottom: 0;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li button {
+	padding: 0.5em 1em;
+	transition: background 0.2s ease-in-out;
+	width: 100%;
+	text-align: left;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li button .checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #000;
+	border-radius: 4px;
+	margin-right: 5px;
+	position: relative;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li button .checkbox .check {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	opacity: 0;
+	scale: 0.6;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li button p {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: Gza;
+	font-size: 15px;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li button p .count::after {
+	content: attr(data-count);
+	font-family: "Univers LT Roman";
+	font-size: 15px;
+	color: #727272;
+	margin-left: 5px;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li:hover button {
+	background-color: #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li.active button {
+	background-color: #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner li.active .checkbox .check {
+	opacity: 1;
+}
+
+#productResultsFeed > .inner .filterContainer .sortContainer > .inner .mobile-sort-buttons {
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters {
+	grid-area: activeFilters;
+	height: auto;
+	overflow: hidden;
+	overflow-x: scroll;
+	max-height: 0%;
+	width: 100%;
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters::-webkit-scrollbar {
+	display: none;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters.active {
+	max-height: 100%;
+	border-top: 1px solid #f5f5f5;
+	display: block;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters ul {
+	padding: 20px 0;
+	font-size: 0;
+	margin: 0;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters ul li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters ul li:last-child {
+	margin-right: 0;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters ul li button {
+	padding: 5px 10px;
+	border: 8px;
+	background-color: #f5f5f5;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters ul li button p {
+	font-size: 14px;
+	font-family: Gza;
+	display: inline-block;
+	vertical-align: middle;
+	text-transform: capitalize;
+	color: #000;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters ul li button svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+#productResultsFeed > .inner .filterContainer .activeFilters ul li.clear button {
+	background-color: #fff;
+}
+
+#productResultsFeed > .inner .feedContainer {
+	width: 100%;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner {
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 5px;
+	transition: all 0.2s ease-in-out;
+	align-content: space-between;
+	overflow: hidden;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #fff;
+	display: none;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	grid-template-columns: repeat(2, auto);
+	grid-gap: 10px;
+	justify-content: space-between;
+	z-index: 1;
+	padding: 20px;
+	align-items: start;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer p {
+	font-size: 14px;
+	font-family: "Univers LT Roman";
+	text-transform: uppercase;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer p.bestSeller {
+	background-color: #edff00;
+	padding: 5px;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer svg {
+	width: 45px;
+	height: auto;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer {
+	position: relative;
+	background-color: #f5f5f5;
+	transition: background 0.2s ease-in-out;
+	overflow: hidden;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer picture {
+	display: block;
+	transition: scale 0.2s ease-in-out;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer picture img {
+	aspect-ratio: 9 / 10;
+	object-fit: cover;
+	left: 0;
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer .colorVariants {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-size: 0;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer .colorVariants .colorVariant {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px 5px 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	transition: border 0.2s ease-in-out;
+	cursor: pointer;
+	z-index: 3;
+	position: relative;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer .colorVariants .colorVariant:last-child {
+	margin-right: 0;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer .colorVariants .colorVariant.active {
+	border-color: #fe5000;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content {
+	padding: 20px;
+	grid-template-columns: 1fr auto;
+	grid-template-areas: "title price" "surface surface" "description description" "variants variants";
+	grid-gap: 5px 10px;
+	align-items: start;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content h3 {
+	font-size: 18px;
+	font-family: Gza;
+	grid-area: title;
+	font-weight: 600;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p {
+	font-size: 15px;
+	font-family: "Univers LT Roman";
+	color: #727272;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p:nth-child(4) {
+	grid-area: description;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p:nth-child(5) {
+	grid-area: surface;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p:last-child {
+	grid-area: variants;
+	font-weight: 300;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content .price {
+	font-size: 22px;
+	font-family: Gza;
+	grid-area: price;
+	font-weight: 600;
+	color: #000;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content > div {
+	width: 100%;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item .content > div > p {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item:hover .imageContainer picture {
+	scale: 1.1;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item:hover .imageContainer .colorVariants {
+	opacity: 1;
+}
+
+#productResultsFeed > .inner .feedContainer .feed > .inner .item.active,
+#productResultsFeed > .inner .feedContainer .feed > .inner .item.surface,
+#productResultsFeed > .inner .feedContainer .feed > .inner .item.sizes,
+#productResultsFeed > .inner .feedContainer .feed > .inner .item.color,
+#productResultsFeed > .inner .feedContainer .feed > .inner .item.gender,
+#productResultsFeed > .inner .feedContainer .feed > .inner .item.collections {
+	display: block;
+}
+
+#productResultsFeed > .inner .feedContainer .feed .loadMoreContainer {
+	padding-top: 50px;
+	text-align: center;
+}
+
+#productResultsFeed > .inner .feedContainer .feed .loadMoreContainer p {
+	font-size: 16px;
+	font-family: "Univers LT Roman";
+}
+
+#productResultsFeed > .inner .feedContainer .feed .loadMoreContainer .loadMore {
+	margin-top: 20px;
+	font-size: 15px;
+	font-family: GZA;
+	padding: 1em;
+	border: 1px solid #000;
+	border-radius: 30px;
+	min-width: 200px;
+	text-align: center;
+	background-color: #fff;
+	transition: all 0.2s ease-in-out;
+	color: #000;
+}
+
+#productResultsFeed > .inner .feedContainer .feed .loadMoreContainer .loadMore svg {
+	margin-left: 5px;
+}
+
+#productResultsFeed > .inner .feedContainer .feed .loadMoreContainer .loadMore svg path {
+	transition: all 0.2s ease-in-out;
+}
+
+#productResultsFeed > .inner .feedContainer .feed .loadMoreContainer .loadMore:hover {
+	background-color: #f5f5f5;
+}
+
+@media (max-width: 880px) {
+	#productResultsFeed > .inner .filterContainer {
+		border-top: 1px solid #f5f5f5;
+		grid-template-columns: auto auto;
+		grid-template-areas: "filterButton sortButton" "activeFilters activeFilters";
+		justify-content: space-between;
+	}
+	#productResultsFeed > .inner .filterContainer .filterButton button .text::before {
+		display: none;
+	}
+	#productResultsFeed > .inner .filterContainer .filters {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		background-color: #fff;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		overflow-y: scroll;
+		visibility: hidden;
+	}
+	#productResultsFeed > .inner .filterContainer .filters.active {
+		visibility: visible;
+		height: 100vh;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul {
+		padding: 20px clamp(20px, 5vw, 50px);
+		grid-template-columns: 1fr;
+		justify-content: start;
+		position: relative;
+		padding-bottom: 80px;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul > .closeButton {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		display: block;
+		width: 20px;
+		height: 20px;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul > .closeButton svg {
+		width: 20px;
+		height: 20px;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .title {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .title p {
+		font-family: Gza;
+		font-size: 28px;
+		font-weight: 600;
+		color: #000;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter {
+		width: 100%;
+		padding-bottom: 30px;
+		border: none;
+		border-bottom: 1px solid #f5f5f5;
+		margin-bottom: 10px;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter button p {
+		padding: 20px 0;
+		font-family: "Univers LT Roman";
+		font-size: 18px;
+		color: #000;
+		font-family: Gza;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter button p svg {
+		display: none;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter button:hover p {
+		background-color: unset;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown {
+		position: relative;
+		display: block;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .background,
+	#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown .closeButton {
+		display: none;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner {
+		padding: 0;
+		box-shadow: none;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption {
+		width: 100%;
+		maring: 0;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button {
+		padding: 0;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter .filterDropdown > .inner .filterOption button p {
+		padding: 10px 0;
+		color: #000;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .filter:last-child {
+		border: none;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .mobile-filter-buttons {
+		display: grid;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		grid-gap: 10px;
+		grid-template-columns: 1fr 1fr;
+		z-index: 99;
+		background-color: #fff;
+		box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .mobile-filter-buttons button {
+		width: 100%;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .mobile-filter-buttons button p {
+		font-family: Gza;
+		font-size: 16px;
+		border-radius: 30px;
+		overflow: hidden;
+		padding: 0.5em;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .mobile-filter-buttons button p span {
+		margin-left: 5px;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .mobile-filter-buttons button.clear p {
+		color: #000;
+		border: 1px solid #727272;
+	}
+	#productResultsFeed > .inner .filterContainer .filters ul .mobile-filter-buttons button.apply p {
+		background-color: #000;
+		color: #fff;
+		border: 1px solid #000;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		background-color: #fff;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		overflow-y: scroll;
+		visibility: hidden;
+		bottom: unset;
+		right: unset;
+		translate: unset;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer.active {
+		visibility: visible;
+		height: 100vh;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer.active > .background {
+		display: none;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .closeButton {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		display: block;
+		width: 20px;
+		height: 20px;
+		display: block;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .closeButton svg {
+		width: 20px;
+		height: 20px;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner {
+		padding: 20px clamp(20px, 5vw, 50px);
+		grid-template-columns: 1fr;
+		justify-content: start;
+		box-shadow: none;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .title {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .title p {
+		font-family: Gza;
+		font-size: 28px;
+		font-weight: 600;
+		color: #000;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .sortOption {
+		width: 100%;
+		margin: 0;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .sortOption button {
+		padding: 0;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .sortOption button p {
+		padding: 10px 0;
+		color: #000;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .mobile-sort-buttons {
+		display: grid;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		z-index: 99;
+		background-color: #fff;
+		box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .mobile-sort-buttons:hover button {
+		background-color: unset;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .mobile-sort-buttons button {
+		padding: 0;
+		transition: none;
+		text-align: center;
+		border-radius: 0;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .mobile-sort-buttons button p {
+		width: 100%;
+		font-family: Gza;
+		font-size: 16px;
+		border-radius: 30px;
+		overflow: hidden;
+		padding: 0.5em;
+	}
+	#productResultsFeed > .inner .filterContainer .sortContainer > .inner .mobile-sort-buttons button.apply p {
+		background-color: #000;
+		color: #fff;
+		border: 1px solid #000;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item {
+		max-width: unset;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .imageContainer .colorVariants {
+		display: none;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .content {
+		grid-template-columns: 1fr;
+		grid-template-areas: "title" "surface" "description " "variants " "price";
+	}
+}
+
+@media (max-width: 480px) {
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer p {
+		font-size: 8px;
+		line-height: 10px;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer img,
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer svg {
+		max-width: 25px;
+		height: auto;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .content > div > p {
+		display: block;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p {
+		line-height: 19px;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p.ground-type {
+		display: none;
+	}
+}
+
+/*# sourceMappingURL=product-results.css.map */

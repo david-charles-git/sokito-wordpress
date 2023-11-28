@@ -1,0 +1,300 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.clrWhite {
+  color: #fff;
+}
+
+.clrBlack {
+  color: #000;
+}
+
+.clrOrange {
+  color: #fc4f00;
+}
+
+.strokeText {
+  font-family: GZAOutline;
+}
+
+.TwoColumn {
+  padding: 0 50px;
+  position: relative;
+}
+
+.TwoColumn > .background,
+.TwoColumn > .backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.TwoColumn > .inner {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 'left right';
+  grid-gap: 50px;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.TwoColumn > .inner > .left {
+  grid-area: left;
+  height: 100%;
+}
+
+.TwoColumn > .inner > .right {
+  grid-area: right;
+  height: 100%;
+}
+
+.TwoColumn > .inner > .left > .inner.text,
+.TwoColumn > .inner > .right > .inner.text {
+  padding: 50px 0;
+  max-width: 600px;
+}
+
+.TwoColumn > .inner > .left > .inner.text {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.TwoColumn > .inner > .left > .inner.text > h2,
+.TwoColumn > .inner > .right > .inner.text > h2 {
+  font-size: 70px;
+  font-family: Gza;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: #fc4f00;
+  font-weight: 400;
+  display: inline-block;
+  margin: 0;
+}
+
+.TwoColumn > .inner > .left > .inner.text > p,
+.TwoColumn > .inner > .right > .inner.text > p {
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  font-family: 'Univers LT Roman';
+  color: #000;
+}
+
+.TwoColumn > .inner > .left > .inner.text > p,
+.TwoColumn > .inner > .right > .inner.text > p {
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  font-family: 'Univers LT Roman';
+  color: #000;
+}
+
+.TwoColumn > .inner > .left > .inner.text > p > a,
+.TwoColumn > .inner > .right > .inner.text > p > a {
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.TwoColumn > .inner > .left > .inner.text > p > a:hover,
+.TwoColumn > .inner > .right > .inner.text > p > a:hover {
+  color: #fc4f00;
+}
+
+.TwoColumn > .inner > .left > .inner.text > button,
+.TwoColumn > .inner > .right > .inner.text > button {
+  background-color: #fc4f00;
+  border-color: #fc4f00;
+  transition: background 0.2s ease, opacity 0.2s ease, border 0.2s ease, color 0.2s ease;
+  min-width: 250px;
+  margin-top: 50px;
+}
+
+.TwoColumn > .inner > .left > .inner.text > button:hover,
+.TwoColumn > .inner > .right > .inner.text > button:hover {
+  background-color: #e24700;
+  border-color: #e24700;
+}
+
+.TwoColumn > .inner > .left > .inner.text > button > a,
+.TwoColumn > .inner > .right > .inner.text > button > a {
+  color: #fff;
+}
+
+.TwoColumn > .inner > .left > .inner.image,
+.TwoColumn > .inner > .right > .inner.image {
+  height: 100%;
+  opacity: unset;
+  background: unset;
+  transition: unset;
+  min-height: 500px;
+}
+
+.TwoColumn > .inner > .left > .inner.image > .imageContainer,
+.TwoColumn > .inner > .right > .inner.image > .imageContainer {
+  position: relative;
+  height: 100%;
+}
+
+.TwoColumn > .inner > .left > .inner.image > .imageContainer > picture,
+.TwoColumn > .inner > .right > .inner.image > .imageContainer > picture {
+  translate: -50px 0;
+  left: 0;
+  top: 0;
+  width: calc(100% + 50px);
+  overflow: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+}
+
+.TwoColumn > .inner > .right > .inner.image > .imageContainer > picture {
+  translate: 0;
+}
+
+.TwoColumn > .inner > .left > .inner.image > .imageContainer > img,
+.TwoColumn > .inner > .right > .inner.image > .imageContainer > img,
+.TwoColumn > .inner > .left > .inner.image > .imageContainer > picture > img,
+.TwoColumn > .inner > .right > .inner.image > .imageContainer > picture > img {
+  position: absolute;
+  translate: -50% -50%;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+}
+
+.TwoColumn > .inner > .left > .inner.list,
+.TwoColumn > .inner > .right > .inner.list {
+  max-width: 600px;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer,
+.TwoColumn > .inner > .right > .inner.list > .listContainer {
+  padding: 50px 0;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li {
+  margin-bottom: 50px;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li:nth-last-child(1),
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li > h3,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li > h3 {
+  margin: 0px;
+  font-size: 48px;
+  color: #000;
+  font-family: Extenda40;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li > p,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li > p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  font-family: 'Univers LT Roman';
+  color: #000;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li > p > a,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li > p > a {
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li > p > a:hover,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li > p > a:hover {
+  color: #fc4f00;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li > button,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li > button {
+  background-color: #fc4f00;
+  border-color: #fc4f00;
+  transition: background 0.2s ease, opacity 0.2s ease, border 0.2s ease, color 0.2s ease;
+  min-width: 250px;
+  margin-top: 20px;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li > button:hover,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li > button:hover {
+  background-color: #e24700;
+  border-color: #e24700;
+}
+
+.TwoColumn > .inner > .left > .inner.list > .listContainer > ul > li > button > a,
+.TwoColumn > .inner > .right > .inner.list > .listContainer > ul > li > button > a {
+  color: #fff;
+}
+
+@media (max-width: 880px) {
+  .TwoColumn {
+    padding: 0 20px;
+  }
+
+  .TwoColumn > .inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'left' 'right';
+  }
+
+  .TwoColumn > .inner > .left > .inner.text {
+    margin: 0 auto;
+  }
+
+  .TwoColumn > .inner > .left > .inner.text > h2,
+  .TwoColumn > .inner > .right > .inner.text > h2 {
+    font-size: 40px;
+  }
+
+  .TwoColumn > .inner > .left > .inner.text > h2 span,
+  .TwoColumn > .inner > .right > .inner.text > h2 span {
+    font-size: inherit;
+  }
+
+  .TwoColumn > .inner > .left > .inner.image,
+  .TwoColumn > .inner > .right > .inner.image {
+    min-height: 400px;
+  }
+
+  .TwoColumn > .inner > .right {
+  }
+
+  .TwoColumn > .inner > .left > .inner.list > .listContainer,
+  .TwoColumn > .inner > .right > .inner.list > .listContainer {
+    padding: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .TwoColumn > .inner > .left > .inner.image,
+  .TwoColumn > .inner > .right > .inner.image {
+    min-height: 300px;
+  }
+}

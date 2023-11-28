@@ -1,0 +1,134 @@
+Product Details and Hotspot Module
+
+Assests / Information Required
+what elements should have transitions / aniimations and what whould they be?
+
+Requirements:
+    Module container:
+        Background of #F7F7F7
+        No width restiction applied
+        Made up of three sections:
+            Tab button container
+            Details container
+            Hotspot container
+        
+    Tab button container:  
+        ultimate content width of 1920px
+        main content width of 1320px
+        padding left right 50px desktop
+        padding left right 20px mobile (<= 880px)
+        container width set to be the width of the items contained when all on one line
+        if the container width is greater than the screen width, the container will tern into a slider
+        this container contains three buttons: Description, Materials, Reviews
+
+    Tab button:
+        background color of #FFFFFF by default
+        text color of #000000 by default
+        if active or on hover :
+            background color of #000000
+            text color of #FFFFFF
+        no max width applies
+        on click the buttons will do the following:
+            Description:
+                the Description content in the details container will display
+                the Description hostpot data will display
+            Materials:
+                the Materials content in the details container will display
+                the Materials hotspot data will display
+            Reviews:
+                the Reviewsconten in the details container will display
+                the hostspot container will hide  
+    
+    Details container:
+        ultimate content width of 1920px
+        main content width of 1320px
+        padding left right 50px desktop
+        padding left right 20px mobile (<= 880px)
+        contains three detail areas: Description, Materials, Reviews
+        max width restricted to 920px;
+        height of container will change depending on the content displayed inside
+        Materials section checklist is emphasised wil orange tick Asset
+        Reviews section has not been worked on and will be taken from existing Module
+
+    Hotspot container:
+        main content width of 1920px
+        padding bottom 50px
+        padding left right 50px desktop
+        padding left right 20px mobile (<= 880px)
+        made up of four parts:
+            content left
+            hotspot areas
+            conent right
+            colour switch buttons
+        
+    hotspot content containrs:
+        container left will sit to the left of the hotspot areas on desktop
+        container right will sit to the right of the hotspot areas on desktop
+        both left and right containers will sit beneith the hotspot area on mobile (<= 1080px)
+        the max height of the containers is equal to the height of the hostspot container on desktop
+        there are no height restictions on mobile (<= 1080px)
+        the width of the containers are one half of the avliable container space on desktop
+        the width is resticted to 700px on mobile (<= 1080px)
+        background color #FFFFFF
+        padding of 20px
+        padding top 150px on mobile to get the overlapp effect (<= 1080px)
+        contains a h5 for the title 
+        contains a p for the copy
+
+    hotpost areas:
+        width restricted to 740px on desktop
+        width restricted to 520 on large tablet / small desktop (<= 1500px)
+        width unrestrcited on mobile (<= 980px)
+        height resticted on mobile tp 400px (<= 980px)
+        The size of the image within is based an image with a 16 / 9 ratio
+        if the container is larger than the screen with the contaer will become a slider
+        made up of two parts:
+            image container
+            hotspots
+
+        image container:
+            The image container is resticted to a 16 / 9 ratio
+            the max width of the image is 700px
+            the image should be in a webp format for optimal performance
+            all images should be the same size (min 700px wide) and an aspect ratio of 16 / 9
+            all images are loaded in at the same time so allow for transitions between images
+            the images do not refresh when the tabs are changed to save lag and redownloads
+
+        hotspots:
+            Each hotspot is positioned based on the strict sizes above
+            each hotspot is placed manually
+            each hotspot has a pulse animation to make it clearer to the user that they do something
+            the hotspots have a hover function on desktop
+            the hotspots have a click function on mobile (<= 1080px)
+
+            hover function:
+                on enter all other hotspots and cards will revert to default status
+                on enter hotspot status will be active
+                on enter the related content card will display either tot he left or the right of the hotspot container bepending on the location of the hotspot
+                on enter the hotspot will change from #000000 fill to #FC4F00 fill
+                on leave the related card will hide
+                on leave the hotspot's fill wil return to #000000
+                on leave hotpost status will revert to default
+
+            click function
+                on click all other hotspots and cards will revert to default status
+                on click hotspot status will be active
+                on click the related content card will display below the hotspot container
+                on click the hotspot will change from #000000 fill to #FC4F00 fill
+
+    color switch container:
+        padding top bottom of 20px on desktop
+        padding top bottom of 10px on mobile (<= 980px)
+        positioned below the hotspot area on desktop
+        positioned above the hotspot area on mobile (<= 980px)
+        contains four color switch buttons
+    
+    color switch button
+        padding of 5px
+        border 2px solid transparent
+        border 2px solid #000 when active
+        button spaccing 20px on desktop
+        button spacing 10px on mobile (<= 980px)
+        button sqaure with with 30px on desktop
+        button square with width 20px on mobile (<= 980px)
+        on click the the image within the hotpost area will change to the corisponding image

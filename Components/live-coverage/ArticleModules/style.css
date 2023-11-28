@@ -1,0 +1,522 @@
+section.ArticleModule {
+    position: relative;
+    max-width: 100vw;
+    overflow-x: clip;
+}
+section.ArticleModule > .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.ArticleModule > .outer { 
+    max-width: 1920px;
+    padding: 0 50px;
+    margin: 0 auto;
+    position: relative;
+}
+section.ArticleModule > .outer > .inner { 
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 420px 1fr;
+    grid-template-areas: "left right";
+}
+section.ArticleModule > .outer > .inner > .left { 
+    grid-area: left;
+    height: 100%;
+    position: relative;
+    max-width: 420px;
+    margin-right: 0;
+}
+section.ArticleModule > .outer > .inner > .right { 
+    grid-area: right;
+    min-height: 100%;
+}
+
+
+section.ArticleModule.intro > .outer > .inner > .left > h2 {
+    font-family: 'Univers LT Roman';
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+section.ArticleModule.intro > .outer > .inner > .left > .shareButtonContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+section.ArticleModule.intro > .outer > .inner > .right > .imageContainer {
+    max-height: 700px;
+    overflow-y: clip;
+}
+section.ArticleModule.intro > .outer > .inner > .right > .imageContainer > img {
+    aspect-ratio: 16 / 9;
+    max-width: 1170px;
+    min-width: calc(100% + 50px);
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 450px;
+    width: calc(100vw - 570px)
+}
+section.ArticleModule.intro > .outer > .inner > .right > .videoContainer {
+    position: relative;
+}
+section.ArticleModule.intro > .outer > .inner > .right > .videoContainer > video {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+section.ArticleModule.intro > .outer > .inner > .right > .videoContainer > .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: opacity 200ms ease;
+    opacity: 1;
+}
+section.ArticleModule.intro > .outer > .inner > .right > .videoContainer.active > .thumbnail {
+    opacity: 0;
+}
+section.ArticleModule.intro > .outer > .inner > .right > .videoContainer > .thumbnail > .playButton {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.ArticleModule.intro > .outer > .inner > .right > .videoContainer > .thumbnail > .playButton > svg {
+    width: 50px;
+    height: 50px;
+}
+section.ArticleModule.intro > .outer > .inner > .right > .iframeContainer {
+    position: relative;
+}
+section.ArticleModule.intro > .outer > .inner > .right > .iframeContainer > iframe {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    border: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+
+
+section.ArticleModule.text > .outer > .inner > .left > h3 {
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-family: 'Univers LT Roman';
+}
+section.ArticleModule.text > .outer > .inner > .right > p {
+    font-family: 'Univers LT Roman';
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+
+section.ArticleModule.quote > .outer > .inner > .left > h3 {
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-family: 'Univers LT Roman';
+}
+section.ArticleModule.quote > .outer > .inner > .right > p {
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    font-weight: lighter;
+    font-style: oblique;
+    color: #48A18A;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: 'Univers LT Roman';
+}
+section.ArticleModule.quote > .outer > .inner > .right > p::before {
+    content: '"';
+    display: block;
+    color: black;
+    font-size: 60px;
+    line-height: 1;
+}
+
+
+section.ArticleModule.image {
+    height: unset;
+    background-color: unset;
+    opacity: unset;
+    webkit-transition: unset;
+    transition: unset;
+    background-image: unset;
+    background-size: unset;
+}
+section.ArticleModule.image > .outer > .inner > .right {
+    max-width: 868px;
+}
+section.ArticleModule.image > .outer > .inner > .right > .imageContainer {
+    max-height: 700px;
+    overflow-y: clip;
+    width: 100%;
+}
+section.ArticleModule.image > .outer > .inner > .right > .imageContainer > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+section.ArticleModule.video {
+    height: unset;
+    background-color: unset;
+    opacity: unset;
+    webkit-transition: unset;
+    transition: unset;
+    background-image: unset;
+    background-size: unset;
+}
+section.ArticleModule.video > .outer > .inner > .right {
+    max-width: 868px;
+}
+section.ArticleModule.video > .outer > .inner > .right > .iframeContainer {
+    position: relative;
+    max-height: 700px;
+    overflow-y: clip;
+    width: 100%;
+}
+section.ArticleModule.video > .outer > .inner > .right > .iframeContainer > iframe {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    border: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+section.ArticleModule.video > .outer > .inner > .right > .videoContainer {
+    position: relative;
+    max-height: 700px;
+    overflow-y: clip;
+    width: 100%;
+}
+section.ArticleModule.video > .outer > .inner > .right > .videoContainer > video {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+section.ArticleModule.video > .outer > .inner > .right > .videoContainer > .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: opacity 200ms ease;
+    opacity: 1;
+}
+section.ArticleModule.video > .outer > .inner > .right > .videoContainer.active > .thumbnail {
+    opacity: 0;
+}
+section.ArticleModule.video > .outer > .inner > .right > .videoContainer > .thumbnail > .playButton {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.ArticleModule.video > .outer > .inner > .right > .videoContainer > .thumbnail > .playButton > svg {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 1080px) {
+    section.ArticleModule > .outer { 
+        padding: 0 20px;
+    }
+    section.ArticleModule > .outer > .inner { 
+        grid-template-areas:
+            "left"
+            "right";
+        grid-gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    
+    section.ArticleModule.intro > .outer > .inner > .left > h2 {
+        font-size: 30px;
+    }
+    section.ArticleModule.intro > .outer > .inner > .right > .imageContainer > img {
+        width: calc(100% + 40px);
+        transform: translateX(-20px);
+        min-height: 250px;
+        min-width: unset;
+    }
+
+
+    section.ArticleModule.text > .outer > .inner > .left > h3 {
+        font-size: 26px;
+    }
+
+    section.ArticleModule.quote > .outer > .inner > .left > h3 {
+        font-size: 26px;
+    }
+    section.ArticleModule.quote > .outer > .inner > .right > p {
+        font-size: 26px;
+    }  
+}
+
+.readMoreParent p {
+    font-family: 'Univers LT Roman';
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+.readMoreParent p > a {
+    font-weight: bold;
+    transition: color 200ms ease;
+}
+.readMoreParent p > a:hover { 
+    color: #FC4F00
+}
+.readMoreParent,
+.readMoreButton {
+    transition: all 300ms ease-in-out;
+}
+.readMoreParent p.readMoreButton{
+    font-weight: 700;
+}
+.readMoreParent p.readMoreButton::before {
+    content: "... ";
+    font-weight: 400;
+}
+.readMoreParent .active p.readMoreButton::before {
+    content: "";
+    font-weight: 400;
+}
+.readMoreParent .readMoreButton:hover {
+    color: #FC4F00;
+}
+
+.readMoreContainer .readMoreTabletCopy,
+.readMoreContainer .readMoreDesktopCopy,
+.readMoreContainer .readMoreReadmore,
+.readMoreContainer .readMoreButton,
+.readMoreContainer.readMoreMobile .readMoreTabletCopy,
+.readMoreContainer.readMoreMobile .readMoreDesktopCopy,
+.readMoreContainer.readMoreMobile .readMoreButton,
+.readMoreContainer.readMoreMobile.readMoreTablet .readMoreDesktopCopy,
+.readMoreContainer.readMoreMobile.readMoreTablet .readMoreButton,
+.readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreReadmore {
+    display: none;
+}
+
+.readMoreParent p,
+.readMoreContainer .readMoreMobileCopy,
+.readMoreContainer.readMoreMobile .readMoreMobileCopy,
+.readMoreContainer.readMoreMobile .readMoreReadmore,
+.readMoreContainer.readMoreMobile.readMoreTablet .readMoreMobileCopy,
+.readMoreContainer.readMoreMobile.readMoreTablet .readMoreTabletCopy,
+.readMoreContainer.readMoreMobile.readMoreTablet .readMoreReadmore,
+.readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreMobileCopy,
+.readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreTabletCopy,
+.readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreDesktopCopy {
+    display: inline;
+}
+
+.readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreButton {
+    display: inline-block;
+}
+
+.readMoreParent p.readMoreButton {
+    cursor: pointer;
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 1080px) {
+    .readMoreContainer .readMoreTabletCopy,
+    .readMoreContainer .readMoreDesktopCopy,
+    .readMoreContainer .readMoreReadmore,
+    .readMoreContainer .readMoreButton,
+    .readMoreContainer.readMoreMobile .readMoreTabletCopy,
+    .readMoreContainer.readMoreMobile .readMoreDesktopCopy,
+    .readMoreContainer.readMoreMobile .readMoreButton .readMoreContainer.readMoreMobile.readMoreTablet .readMoreDesktopCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreReadmore,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreDesktopCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreReadmore {
+        display: none;
+    }
+
+    .readMoreContainer .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreTabletCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreTabletCopy,
+    .readMoreContainer.readMoreMobile .readMoreReadmore {
+        display: inline;
+    }
+
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreButton,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreButton {
+        display: inline-block;
+    }
+
+}
+
+@media only screen and (max-width: 880px) {
+    .readMoreContainer .readMoreTabletCopy,
+    .readMoreContainer .readMoreDesktopCopy,
+    .readMoreContainer .readMoreReadmore,
+    .readMoreContainer .readMoreButton,
+    .readMoreContainer.readMoreMobile .readMoreTabletCopy,
+    .readMoreContainer.readMoreMobile .readMoreDesktopCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreDesktopCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreReadmore,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreDesktopCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreTabletCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreReadmore,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreTabletCopy,
+    .readMoreContainer.readMoreMobile .readMoreReadmore {
+        display: none;
+    }
+
+    .readMoreContainer .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreMobileCopy,
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreTabletCopy {
+        display: inline;
+    }
+
+    .readMoreContainer.readMoreMobile.readMoreTablet.readMoreDesktop .readMoreButton,
+    .readMoreContainer.readMoreMobile.readMoreTablet .readMoreButton,
+    .readMoreContainer.readMoreMobile .readMoreButton {
+        display: inline-block;
+    }
+}
+
+/* Share Button - start */
+.shareButtonContainer {
+    display: grid;
+    grid-template-areas: "button options";
+    align-content: center;
+    justify-content: start;
+    align-items: center;
+    grid-gap: 10px;
+}
+.shareButtonContainer > button.shareButton {
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    grid-area: button;
+}
+.shareButtonContainer > button.shareButton > p {
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    display: inline-block;
+    margin-right: 0.2em;
+    vertical-align: middle;
+    color: #000000;
+}
+.shareButtonContainer > button.shareButton > .shareIcon {
+    display: inline-block;
+    width: 15px;
+    aspect-ratio: 1 / 1;
+    vertical-align: middle;
+    position: relative;
+}
+.shareButtonContainer > button.shareButton > .shareIcon > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all 200ms ease;
+}
+.shareButtonContainer > button.shareButton > .shareIcon > svg:nth-child(2) {
+    opacity: 0;
+}
+.shareButtonContainer > button.shareButton:hover > .shareIcon > svg:nth-child(1) {
+    opacity: 0;
+}
+.shareButtonContainer > button.shareButton:hover > .shareIcon > svg:nth-child(2) {
+    opacity: 1;
+}
+.shareButtonContainer.active > button.shareButton > .shareIcon > svg:nth-child(1) {
+    opacity: 0;
+}
+.shareButtonContainer.active > button.shareButton > .shareIcon > svg:nth-child(2) {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+.shareButtonContainer > .shareOptionContainer {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 200ms ease;
+}
+.shareButtonContainer.active > .shareOptionContainer {
+    opacity: 1;
+}
+.shareButtonContainer > .shareOptionContainer > .inner {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    align-content: center;
+    justify-content: start;
+    align-items: center;
+}
+.shareButtonContainer > .shareOptionContainer > .inner > .shareOption {
+    display: inline-block;
+    width: 15px;
+    aspect-ratio: 1 / 1;
+    vertical-align: middle;
+    position: relative;
+}
+
+@media (max-width: 1080px) {
+    .shareButtonContainer > button.shareButton > p {
+        font-size: 16px;
+    }
+}
+/* Share Button - end */

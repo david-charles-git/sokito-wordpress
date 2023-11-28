@@ -1,0 +1,15 @@
+.Spacer > .desktop {
+    display: block;
+}
+.Spacer > .mobile {
+    display: none;
+}
+
+@media (max-width: 880px) {
+    .Spacer > .desktop {
+        display: none;
+    }
+    .Spacer > .mobile {
+        display: block;
+    }
+}

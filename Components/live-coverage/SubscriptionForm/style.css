@@ -1,0 +1,302 @@
+section.SubscriptionForm {
+    padding: 80px 0 200px 0;
+    position: relative;
+}
+section.SubscriptionForm > .background {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.SubscriptionForm > .outer {
+    max-width: 1920px;
+    padding: 0 50px;
+    margin: 0 auto;
+    position: relative;
+}
+section.SubscriptionForm > .outer > .background {
+    position: absolute;
+    top: -45px;
+    right: 0;
+}
+section.SubscriptionForm > .outer > .background > p {
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: #FC4F00;
+    font-family: 'Gza';
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: right;
+}
+section.SubscriptionForm > .outer > .background > p > span:nth-child(odd) {
+    color: rgba(0,0,0,0);
+    -webkit-text-stroke: 1px #FC4F00;
+    
+}
+section.SubscriptionForm > .outer > .inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 350px 1fr;
+    grid-template-areas:
+        "title body"
+        "title form";
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding: 70px 35px;
+}
+section.SubscriptionForm > .outer > .inner > h6 {
+    grid-area: title;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: 'Gza';
+    margin: 0 auto;
+}
+section.SubscriptionForm > .outer > .inner > h6 > span {
+    display: block;
+    line-height: 0.7;
+}
+section.SubscriptionForm > .outer > .inner > h6 > span:nth-child(2) {
+    text-align: right;
+    -webkit-text-stroke: 1px #FC4F00;
+    color: rgba(0,0,0,0);
+}
+section.SubscriptionForm > .outer > .inner > p {
+    grid-area: body;
+    font-family: 'Univers LT Roman';
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+
+}
+section.SubscriptionForm > .outer > .inner > .form {
+    grid-area: form;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner {
+    display: grid;
+    grid-gap: 1em;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "email emailType submit";
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > input {
+    grid-area: email;
+    font-family: 'Gza';
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 1px solid #FFFFFF;
+    transition: all 200ms ease;
+    width: 100%;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > input.error {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: #ffffff;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer {
+    grid-area: emailType;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    border: 1px solid #FFFFFF;
+    transition: all 200ms ease;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer.error {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer > p {
+    font-family: 'Gza';
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #000;
+    padding: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden !important;
+    transition: color 200ms ease;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer.error > p {
+    color: #ffffff;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer > p::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background-image: url(<?php echo "http://" . $_SERVER["HTTP_HOST"] . "/wp-content/themes/sokito/assets/images/chevron-down.png"; ?>);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+    transition: transform 200ms ease;
+    z-index: 2;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer.active > p::after {
+    transform: rotate(180deg);
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer > ul {
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-family: 'Gza';
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #000;
+    padding: 0 2rem;
+    border-radius: 30px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: none;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    transition: height 200ms ease, padding 200ms ease;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer > ul.active {
+    padding: 1em 2rem;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer > ul > li {
+    font-family: 'Gza';
+    font-size: 16px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #000;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #EBEBEB;
+    display: inline-block;
+    width: calc(100% - 30px);
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer > ul > li::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: baseline;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-right: 10px;
+    background-image: url(<?php echo "http://" . $_SERVER["HTTP_HOST"] . "/wp-content/themes/sokito/assets/images/tick-icon.svg"; ?>);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    transition: background 200ms ease;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .dropdownContainer > ul > li.active::before {
+    background-color: #FC4F00;
+}
+section.SubscriptionForm > .outer > .inner > .form > .inner > .submit {
+    grid-area: submit;
+    font-family: 'Gza';
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    color: #FFF;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    margin: 0;
+    border: none;
+    background-color: #FC4F00;
+}
+
+@media (max-width: 1200px) {
+    section.SubscriptionForm > .outer > .inner > .form > .inner {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "email"
+            "emailType"
+            "submit";
+    }
+}
+
+@media (max-width: 1080px) {
+    section.SubscriptionForm {
+        padding-bottom: 150px;
+    }
+    section.SubscriptionForm > .background {
+        aspect-ratio: 3 / 1;
+    }
+    section.SubscriptionForm > .outer {
+        padding: 0 20px;
+    }
+    section.SubscriptionForm > .outer > .background {
+        top: -30px;
+    }
+    section.SubscriptionForm > .outer > .background > p {
+        font-size: 44px;
+    }
+    section.SubscriptionForm > .outer > .inner {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "body"
+            "form";
+        padding: 20px 10px;
+    }
+    section.SubscriptionForm > .outer > .inner > h6 {
+        font-size: 44px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    section.SubscriptionForm > .background {
+        aspect-ratio: 2 / 1;
+    }
+    section.SubscriptionForm > .outer > .background {
+        overflow: hidden;
+        right: unset;
+        left: 0;
+    }
+    section.SubscriptionForm > .outer > .background > p {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        align-content: center;
+        justify-content: start;
+        grid-gap: 0.25em;
+        text-align: left;
+    }
+}

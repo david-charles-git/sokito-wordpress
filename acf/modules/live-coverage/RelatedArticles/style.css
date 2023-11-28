@@ -1,0 +1,210 @@
+section.RelatedArticles > .outer {
+    max-width: 1920px;
+    padding: 50px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 50px;
+}
+section.RelatedArticles > .outer > .inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 420px 1fr;
+    grid-template-areas: "left right";
+}
+section.RelatedArticles > .outer > .inner > .left {
+    grid-area: left;
+    height: 100%;
+    position: relative;
+    max-width: 420px;
+    margin-right: 0;
+}
+section.RelatedArticles > .outer > .inner > .left > h6 {
+    font-family: 'Univers LT Roman';
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+section.RelatedArticles > .outer > .inner > .left > .taxonomyContainer > .taxonomy {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    cursor: pointer;
+    border: 1px solid #727272;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    transition: border 200ms ease;
+}
+section.RelatedArticles > .outer > .inner > .left > .taxonomyContainer > .taxonomy:hover {
+    border-color: #EBEBEB;
+}
+section.RelatedArticles > .outer > .inner > .left > .taxonomyContainer > .taxonomy > p {
+    font-family: 'Univers LT Roman';
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #727272;
+    padding: 0.5em;
+    text-transform: uppercase;
+    transition: color 200ms ease;
+    position: relative;
+}
+section.RelatedArticles > .outer > .inner > .left > .taxonomyContainer > .taxonomy:hover > p {
+    color: #EBEBEB;
+}
+section.RelatedArticles > .outer > .inner > .right {
+    grid-area: right;
+    min-height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article {
+    position: relative;
+    padding: 40px 0;
+    border-bottom: 3px solid #EBEBEB;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 430px;
+    grid-template-areas: "left right";
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .left {
+    grid-area: left;
+    height: 100%;
+    position: relative;
+    margin-right: 0;
+    min-height: 200px;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .left > .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right {
+    grid-area: right;
+    display: grid;
+    align-content: center;
+    justify-content: start;
+    align-items: center;
+    grid-template-areas:
+        "title title"
+        "taxonomies readTime";
+    grid-template-columns: 1fr 110px;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > h6 {
+    grid-area: title;
+    font-family: 'Univers LT Roman';
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .taxonomyContainer {
+    grid-area: taxonomies;
+    margin-left: 0;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .taxonomyContainer > .taxonomy {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    cursor: pointer;
+    border: 1px solid #727272;
+    border-radius: 5px;
+    margin: 0 0.5em 0.5em 0;
+    transition: border 200ms ease;
+    position: relative;
+    z-index: 3;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .taxonomyContainer > .taxonomy:hover {
+    border-color: #EBEBEB;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .taxonomyContainer > .taxonomy > p {
+    font-family: 'Univers LT Roman';
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #727272;
+    padding: 0.5em;
+    text-transform: uppercase;
+    transition: color 200ms ease;
+    position: relative;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .taxonomyContainer > .taxonomy:hover > p {
+    color: #EBEBEB;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .readTimeContainer {
+    grid-area: readTime;
+}
+section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .readTimeContainer > p {
+    font-family: 'Univers LT Roman';
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #727272;
+    text-align: right;
+}
+
+@media (max-width: 1180px) {
+    section.RelatedArticles > .outer > .inner {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "left"
+            "right";
+        grid-gap: 0;
+    }
+
+}
+
+@media (max-width: 1080px) {
+    section.RelatedArticles > .outer {
+        padding: 30px 20px;
+    }
+    section.RelatedArticles > .outer > .inner > .left > h6 {
+        font-size: 26px;
+    }
+    section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .left {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 700px) {
+    section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner {
+        grid-template-columns: 120px 1fr;
+    }
+    section.RelatedArticles > .outer > .inner > .left > .taxonomyContainer > .taxonomy {
+        margin-bottom: 1rem;
+    }
+    section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right {
+        grid-template-areas:
+            "title"
+            "taxonomies";
+        grid-template-columns: 1fr;
+    }
+    section.RelatedArticles > .outer > .inner > .right > .articleContainer > .article > .inner > .right > .readTimeContainer {
+        display: none;
+    }
+}

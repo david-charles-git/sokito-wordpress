@@ -1,0 +1,33 @@
+Assests / Information Required :
+    Font files in woff and woff2 formats for the dispaly font (Gza) and the body font (Ubivers LT Std) - the style guide claims they are on google fonts but they are not there as far as I can see - additioanlly self hosting fonts is better for GDPR and page speed.
+    What is the functionality of the read More button? is there a transition between states? does it have a hover state? - I will assume the same functionality as the tully read more if not told otherwise when migrated to prod.
+
+Requiremnts :
+    container :
+        The max width of the content is as per style guide
+        The content is split into two asymemtrical columns on desktop and tablet - title left, text right
+        The content is contained within a single column on mobile - title top, text bottom
+    
+    title :
+        This will be a h3 tag - the font size and style of a h3 in the style guide is incorrect for this container, therefore I have given it the classes font-large and font-body to make it the given font style of an large body element (see style guide)
+        The max width of this container is 420px
+        The color of the title is white (#000000)
+
+    copy :
+        The copy will be styled as the default body text.
+        The container will allow for read more functionality:
+            The container shows a variable number of words on different screen sizes.
+            If the content has less words than the variable amount for that screen size, the read more button will not show, other wise is will hide the additional copy.
+            The button will be bold and read "... Read more" when inactive.
+            on click all content will be made visible and the button will read "Read less" and be set to active.
+            When clicked in the active state, the content and the button copy will return to the initial sate and return to inactive.
+
+Variables Required ( for dev ) :
+    hasCustomClass
+    customclass
+    title
+    copy 
+    hasReadMore 
+    desktopWordCount 
+    tabletWordCount 
+    mobileWordCount 

@@ -1,0 +1,39 @@
+Assests / Information Required :
+    Font files in woff and woff2 formats for the dispaly font (Gza) and the body font (Ubivers LT Std) - the style guide claims they are on google fonts but they are not there as far as I can see - additioanlly self hosting fonts is better for GDPR and page speed.
+    What happens if an article has a number of USPs in this section that is not equal to three? How should they display? 
+    Are the article cards functional? Do they have a link and a hover state?
+    I have not seen this module on the mobile design - is there one? I have stacked them on top of one another for now, but again what happens on mobile is there are a number of cards unqual to three?
+
+Requiremnts :
+    container :
+        The max width of the content is as per style guide
+        The content is split into x <= 3 columns depending on the number of items (x = 1 for 1 card, x = 2 for 2 cards, and x = 3 for 3 + cards)
+        The content is contained within a single column on mobile.
+    
+    USP Card container :
+        This will need to be a h2 tag - the font size adn style of a h2 in the style guide is incorrect for this container, therefore I have given it the classes font-x-large and font-body to make it the given font style of an x-large body element (see style guide)
+        The container for the title will only show upto ten lines of text - this is due to the max-sizing and aspect ratio of the image.
+        The max width of this container is 420px
+        The color of the title is white (#ffffff)
+
+    image :
+        The image would ideally be served in a webp format for better compression and perfomance.
+        The image should be in a 16 / 9 aspect ratio.
+        The max-width of the image will be 1520px
+        On desktop and tablet the image container's height is capped: max - 700px, min- 450px.
+        On mobile the image container's height is capped: min- 250px.
+        The image will only be flush with the right edge of the page on screensizes 1970px and below.
+        The image should be accompanied by an alt tag for screen reader and seo performace.
+
+    share button :
+        This button has a default font style as it was the closest font style in the style guide to the design.
+        The share button will always sit at the bottom of the container and at least 50px from the bottom of the title
+        The share button includes a small icon and the text "Share".
+
+Variables Required ( for dev ) :
+    hasCustomClass
+    customclass
+    title
+    imageSource
+    imageAlt
+    hasShareButton

@@ -1,0 +1,1073 @@
+@import "../theme.scss";
+
+#productResultsFeed {
+	> .inner {
+		.filterContainer {
+			width: 100%;
+			max-width: $max-content-width-outer;
+			padding: 0 $gutter-x;
+			grid-template-columns: auto 1fr auto;
+			grid-template-areas:
+				"filterButton filters sortButton"
+				"activeFilters activeFilters activeFilters";
+			position: relative;
+
+			.filterButton {
+				grid-area: filterButton;
+
+				button {
+					padding: 20px 0;
+					padding-right: clamp(10px, 2vw, 20px);
+
+					svg {
+						display: inline-block;
+						vertical-align: middle;
+					}
+
+					.text {
+						display: inline-block;
+						vertical-align: middle;
+						font-family: GZA;
+						font-size: 15px;
+						margin-left: 5px;
+						color: $color-black;
+
+						&::before {
+							content: "Show";
+							font-family: GZA;
+							font-size: 15px;
+							margin-right: 5px;
+							color: $color-black;
+						}
+					}
+				}
+
+				&.active {
+					button {
+						svg {
+						}
+
+						.text {
+							font-size: 15px;
+							margin-left: 5px;
+
+							&::before {
+								content: "Hide";
+							}
+						}
+					}
+				}
+			}
+
+			.filters {
+				grid-area: filters;
+				width: 100%;
+				max-width: 0%;
+				height: 0;
+				overflow: hidden;
+
+				&.active {
+					max-width: 100%;
+					height: auto;
+					overflow: visible;
+				}
+
+				ul {
+					justify-content: start;
+					grid-template-columns: repeat(5, auto);
+					margin: 0;
+
+					> .closeButton,
+					.title {
+						display: none;
+					}
+
+					.filter {
+						border-left: 1px solid $color-light-grey;
+
+						&:last-child {
+							border-right: 1px solid $color-light-grey;
+						}
+
+						> button {
+							p {
+								transition: background 0.2s ease-in-out;
+								padding: 20px clamp(10px, 2vw, 20px);
+								font-family: Gza;
+								font-size: 15px;
+
+								span {
+									font-family: Gza;
+									font-size: 15px;
+									color: $color-dark-grey;
+								}
+
+								svg {
+									transition: rotate 0.2s ease-in-out;
+									margin-left: 5px;
+								}
+							}
+
+							&:hover {
+								p {
+									background-color: $color-light-grey;
+								}
+							}
+						}
+
+						.filterDropdown {
+							position: absolute;
+							z-index: 2;
+							display: none;
+
+							> .background {
+								position: fixed;
+								top: 0;
+								left: 0;
+								width: 100vw;
+								height: 100vh;
+								display: none;
+							}
+
+							.closeButton {
+								position: absolute;
+								top: 10px;
+								right: 10px;
+								cursor: pointer;
+							}
+
+							&.active {
+								display: block;
+
+								> .background {
+									display: block;
+								}
+							}
+
+							> .inner {
+								border-radius: 0 0 8px 8px;
+								background: $color-white;
+								box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+								padding: 20px 5px;
+								padding: 20px 30px 20px 5px;
+
+								.filterOption {
+									margin-bottom: 5px;
+
+									&:last-child {
+										margin-bottom: 0;
+									}
+
+									button {
+										padding: 0.5em 1em;
+										transition: background 0.2s ease-in-out;
+										width: 100%;
+										text-align: left;
+										border-radius: 8px;
+										overflow: hidden;
+
+										.checkbox {
+											display: inline-block;
+											vertical-align: middle;
+											width: 24px;
+											height: 24px;
+											border: 1px solid $color-black;
+											border-radius: 4px;
+											margin-right: 5px;
+											position: relative;
+
+											.check {
+												position: absolute;
+												top: 50%;
+												left: 50%;
+												translate: -50% -50%;
+												opacity: 0;
+												scale: 0.6;
+												background-color: $color-black;
+												width: 100%;
+												height: 100%;
+												border-radius: 4px;
+											}
+										}
+
+										p,
+										a {
+											display: inline-block;
+											vertical-align: middle;
+											font-family: Gza;
+											font-size: 15px;
+											text-transform: capitalize;
+											color: $color-black;
+
+											.count {
+												font-family: "Univers LT Roman";
+												font-size: 15px;
+												color: $color-dark-grey;
+
+												&::after {
+													content: attr(data-count);
+													font-family: "Univers LT Roman";
+													font-size: 15px;
+													color: $color-dark-grey;
+													margin-left: 5px;
+												}
+											}
+										}
+									}
+
+									&:hover {
+										button {
+											background-color: $color-light-grey;
+										}
+									}
+
+									&.active {
+										button {
+											background-color: $color-light-grey;
+										}
+
+										.checkbox {
+											.check {
+												opacity: 1;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						&.active {
+							button {
+								p {
+									svg {
+										rotate: 180deg;
+									}
+								}
+							}
+						}
+					}
+
+					.mobile-filter-buttons {
+						display: none;
+					}
+				}
+			}
+
+			.sortButton {
+				grid-area: sortButton;
+
+				button {
+					padding: 20px 0;
+					padding-left: clamp(10px, 2vw, 20px);
+
+					svg {
+						display: inline-block;
+						vertical-align: middle;
+						transition: rotate 0.2s ease-in-out;
+					}
+
+					.text {
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 5px;
+						font-family: Gza;
+						font-size: 15px;
+						color: $color-black;
+					}
+				}
+
+				&.active {
+					button {
+						svg {
+							rotate: 180deg;
+						}
+					}
+				}
+			}
+
+			.sortContainer {
+				display: none;
+				position: absolute;
+				max-width: 0%;
+				height: 0;
+				overflow: hidden;
+				width: auto;
+				right: clamp(20px, 5vw, 50px);
+				z-index: 3;
+				top: 64px;
+
+				&.active {
+					max-width: 100%;
+					height: auto;
+					overflow: visible;
+					display: block;
+
+					> .background {
+						display: block;
+					}
+				}
+
+				> .background {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100vw;
+					height: 100vh;
+					display: none;
+				}
+
+				.closeButton {
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					cursor: pointer;
+					display: none;
+				}
+
+				> .inner {
+					border-radius: 0 0 8px 8px;
+					background: $color-white;
+					box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+					padding: 20px 5px;
+					padding: 20px 30px 20px 5px;
+
+					> .closeButton,
+					.title {
+						display: none;
+					}
+
+					li {
+						margin-bottom: 5px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+
+						button {
+							padding: 0.5em 1em;
+							transition: background 0.2s ease-in-out;
+							width: 100%;
+							text-align: left;
+							border-radius: 8px;
+							overflow: hidden;
+
+							.checkbox {
+								display: inline-block;
+								vertical-align: middle;
+								width: 24px;
+								height: 24px;
+								border: 1px solid $color-black;
+								border-radius: 4px;
+								margin-right: 5px;
+								position: relative;
+
+								.check {
+									position: absolute;
+									top: 50%;
+									left: 50%;
+									translate: -50% -50%;
+									opacity: 0;
+									scale: 0.6;
+									background-color: $color-black;
+									width: 100%;
+									height: 100%;
+									border-radius: 4px;
+								}
+							}
+
+							p {
+								display: inline-block;
+								vertical-align: middle;
+								font-family: Gza;
+								font-size: 15px;
+
+								.count {
+									&::after {
+										content: attr(data-count);
+										font-family: "Univers LT Roman";
+										font-size: 15px;
+										color: $color-dark-grey;
+										margin-left: 5px;
+									}
+								}
+							}
+						}
+
+						&:hover {
+							button {
+								background-color: $color-light-grey;
+							}
+						}
+
+						&.active {
+							button {
+								background-color: $color-light-grey;
+							}
+
+							.checkbox {
+								.check {
+									opacity: 1;
+								}
+							}
+						}
+					}
+
+					.mobile-sort-buttons {
+						display: none;
+					}
+				}
+			}
+
+			.activeFilters {
+				grid-area: activeFilters;
+				height: auto;
+				overflow: hidden;
+				overflow-x: scroll;
+				max-height: 0%;
+				width: 100%;
+				display: none;
+
+				&::-webkit-scrollbar {
+					display: none;
+				}
+
+				&.active {
+					max-height: 100%;
+					border-top: 1px solid $color-light-grey;
+					display: block;
+				}
+
+				ul {
+					padding: 20px 0;
+					font-size: 0;
+					margin: 0;
+
+					li {
+						display: inline-block;
+						margin-right: 10px;
+						margin-bottom: 10px;
+
+						&:last-child {
+							margin-right: 0;
+						}
+
+						button {
+							padding: 5px 10px;
+							border: 8px;
+							background-color: $color-light-grey;
+
+							p {
+								font-size: 14px;
+								font-family: Gza;
+								display: inline-block;
+								vertical-align: middle;
+								text-transform: capitalize;
+								color: $color-black;
+							}
+
+							svg {
+								display: inline-block;
+								vertical-align: middle;
+								margin-left: 10px;
+							}
+						}
+
+						&.clear {
+							button {
+								background-color: $color-white;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.feedContainer {
+			width: 100%;
+			// max-width: $max-content-width-outer;
+
+			.feed {
+				> .inner {
+					grid-template-columns: repeat(4, 1fr);
+					grid-gap: 5px;
+					transition: all 0.2s ease-in-out;
+					align-content: space-between;
+					overflow: hidden;
+
+					.item {
+						width: 100%;
+						height: 100%;
+						// max-width: 360px;
+						// overflow: hidden;
+						position: relative;
+						background-color: $color-white;
+						display: none;
+
+						.featureContainer {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							grid-template-columns: repeat(2, auto);
+							grid-gap: 10px;
+							justify-content: space-between;
+							z-index: 1;
+							padding: 20px;
+							align-items: start;
+
+							p {
+								font-size: 14px;
+								font-family: "Univers LT Roman";
+								text-transform: uppercase;
+
+								&.bestSeller {
+									background-color: #edff00;
+									padding: 5px;
+								}
+							}
+
+							svg {
+								width: 45px;
+								height: auto;
+							}
+						}
+
+						.imageContainer {
+							position: relative;
+							background-color: $color-light-grey;
+							transition: background 0.2s ease-in-out;
+							overflow: hidden;
+
+							picture {
+								display: block;
+								transition: scale 0.2s ease-in-out;
+
+								img {
+									// max-width: 90%;
+									aspect-ratio: 9 / 10;
+									object-fit: cover;
+									// left: 5%;
+									left: 0;
+									position: relative;
+									width: 100%;
+									height: auto;
+									display: block;
+								}
+							}
+
+							.colorVariants {
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								width: 100%;
+								padding: 20px;
+								text-align: center;
+								font-size: 0;
+								opacity: 0;
+								transition: opacity 0.2s ease-in-out;
+
+								.colorVariant {
+									display: inline-block;
+									vertical-align: middle;
+									margin: 0 5px 5px 0;
+									width: 20px;
+									height: 20px;
+									border-radius: 50%;
+									border: 1px solid $color-transparent;
+									transition: border 0.2s ease-in-out;
+									cursor: pointer;
+									z-index: 3;
+									position: relative;
+
+									&:last-child {
+										margin-right: 0;
+									}
+
+									&.active {
+										border-color: $color-orange;
+									}
+								}
+							}
+						}
+
+						.content {
+							padding: 20px;
+							grid-template-columns: 1fr auto;
+							grid-template-areas:
+								"title price"
+								"surface surface"
+								"description description"
+								"variants variants";
+							grid-gap: 5px 10px;
+							align-items: start;
+
+							h3 {
+								font-size: 18px;
+								font-family: Gza;
+								grid-area: title;
+								font-weight: 600;
+							}
+
+							p {
+								font-size: 15px;
+								font-family: "Univers LT Roman";
+								color: $color-dark-grey;
+
+								&:nth-child(4) {
+									grid-area: description;
+								}
+
+								&:nth-child(5) {
+									grid-area: surface;
+								}
+
+								&:last-child {
+									grid-area: variants;
+									font-weight: 300;
+								}
+							}
+
+							.price {
+								font-size: 22px;
+								font-family: Gza;
+								grid-area: price;
+								font-weight: 600;
+								color: $color-black;
+							}
+
+							> div {
+								width: 100%;
+
+								> p {
+									display: inline-block;
+									vertical-align: middle;
+								}
+							}
+						}
+
+						&:hover {
+							.imageContainer {
+								picture {
+									scale: 1.1;
+								}
+
+								.colorVariants {
+									opacity: 1;
+								}
+							}
+						}
+
+						&.active,
+						&.surface,
+						&.sizes,
+						&.color,
+						&.gender,
+						&.collections {
+							display: block;
+						}
+					}
+				}
+
+				.loadMoreContainer {
+					padding-top: 50px;
+					text-align: center;
+
+					p {
+						font-size: 16px;
+						font-family: "Univers LT Roman";
+					}
+
+					.loadMore {
+						margin-top: 20px;
+						font-size: 15px;
+						font-family: GZA;
+						padding: 1em;
+						border: 1px solid $color-black;
+						border-radius: 30px;
+						min-width: 200px;
+						text-align: center;
+						background-color: $color-white;
+						transition: all 0.2s ease-in-out;
+						color: $color-black;
+
+						svg {
+							margin-left: 5px;
+
+							path {
+								transition: all 0.2s ease-in-out;
+							}
+						}
+
+						&:hover {
+							background-color: $color-light-grey;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-mobile-large) {
+	#productResultsFeed {
+		> .inner {
+			.filterContainer {
+				border-top: 1px solid $color-light-grey;
+				grid-template-columns: auto auto;
+				grid-template-areas:
+					"filterButton sortButton"
+					"activeFilters activeFilters";
+				justify-content: space-between;
+
+				.filterButton {
+					button {
+						.text {
+							&::before {
+								display: none;
+							}
+						}
+					}
+				}
+
+				.filters {
+					position: fixed;
+					top: 0;
+					left: 0;
+					z-index: 100;
+					background-color: #fff;
+					width: 100vw;
+					height: 100vh;
+					overflow: hidden;
+					overflow-y: scroll;
+					visibility: hidden;
+
+					&.active {
+						visibility: visible;
+						height: 100vh;
+						overflow: hidden;
+						overflow-y: scroll;
+					}
+
+					ul {
+						padding: 20px clamp(20px, 5vw, 50px);
+						grid-template-columns: 1fr;
+						justify-content: start;
+						position: relative;
+						padding-bottom: 80px;
+
+						> .closeButton {
+							position: absolute;
+							top: 20px;
+							right: 20px;
+							display: block;
+							width: 20px;
+							height: 20px;
+
+							svg {
+								width: 20px;
+								height: 20px;
+							}
+						}
+
+						.title {
+							display: block;
+							width: 100%;
+							margin-bottom: 10px;
+
+							p {
+								font-family: Gza;
+								font-size: 28px;
+								font-weight: 600;
+								color: $color-black;
+							}
+						}
+
+						.filter {
+							width: 100%;
+							padding-bottom: 30px;
+							border: none;
+							border-bottom: 1px solid $color-light-grey;
+							margin-bottom: 10px;
+
+							button {
+								p {
+									padding: 20px 0;
+									font-family: "Univers LT Roman";
+									font-size: 18px;
+									color: $color-black;
+									font-family: Gza;
+
+									svg {
+										display: none;
+									}
+								}
+
+								&:hover {
+									p {
+										background-color: unset;
+									}
+								}
+							}
+
+							.filterDropdown {
+								position: relative;
+								display: block;
+
+								> .background,
+								.closeButton {
+									display: none;
+								}
+
+								> .inner {
+									padding: 0;
+									box-shadow: none;
+
+									.filterOption {
+										width: 100%;
+										maring: 0;
+
+										button {
+											padding: 0;
+
+											p {
+												padding: 10px 0;
+												color: $color-black;
+											}
+										}
+									}
+								}
+							}
+
+							&:last-child {
+								border: none;
+							}
+						}
+
+						.mobile-filter-buttons {
+							display: grid;
+							position: fixed;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							padding: 20px;
+							grid-gap: 10px;
+							grid-template-columns: 1fr 1fr;
+							z-index: 99;
+							background-color: $color-white;
+							box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+							button {
+								width: 100%;
+
+								p {
+									font-family: Gza;
+									font-size: 16px;
+									border-radius: 30px;
+									overflow: hidden;
+									padding: 0.5em;
+
+									span {
+										margin-left: 5px;
+									}
+								}
+
+								&.clear {
+									p {
+										color: $color-black;
+										border: 1px solid $color-dark-grey;
+									}
+								}
+
+								&.apply {
+									p {
+										background-color: $color-black;
+										color: $color-white;
+										border: 1px solid $color-black;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.sortContainer {
+					position: fixed;
+					top: 0;
+					left: 0;
+					z-index: 100;
+					background-color: #fff;
+					width: 100vw;
+					height: 100vh;
+					overflow: hidden;
+					overflow-y: scroll;
+					visibility: hidden;
+					bottom: unset;
+					right: unset;
+					translate: unset;
+
+					&.active {
+						visibility: visible;
+						height: 100vh;
+						overflow: hidden;
+						overflow-y: scroll;
+
+						> .background {
+							display: none;
+						}
+					}
+
+					> .closeButton {
+						position: absolute;
+						top: 20px;
+						right: 20px;
+						display: block;
+						width: 20px;
+						height: 20px;
+						display: block;
+
+						svg {
+							width: 20px;
+							height: 20px;
+						}
+					}
+
+					> .inner {
+						padding: 20px clamp(20px, 5vw, 50px);
+						grid-template-columns: 1fr;
+						justify-content: start;
+						box-shadow: none;
+
+						.title {
+							display: block;
+							width: 100%;
+							margin-bottom: 20px;
+
+							p {
+								font-family: Gza;
+								font-size: 28px;
+								font-weight: 600;
+								color: $color-black;
+							}
+						}
+
+						.sortOption {
+							width: 100%;
+							margin: 0;
+
+							button {
+								padding: 0;
+
+								p {
+									padding: 10px 0;
+									color: $color-black;
+								}
+							}
+						}
+
+						.mobile-sort-buttons {
+							display: grid;
+							position: fixed;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							padding: 20px;
+							z-index: 99;
+							background-color: $color-white;
+							box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+							&:hover {
+								button {
+									background-color: unset;
+								}
+							}
+
+							button {
+								padding: 0;
+								transition: none;
+								text-align: center;
+								border-radius: 0;
+
+								p {
+									width: 100%;
+									font-family: Gza;
+									font-size: 16px;
+									border-radius: 30px;
+									overflow: hidden;
+									padding: 0.5em;
+								}
+
+								&.apply {
+									p {
+										background-color: $color-black;
+										color: $color-white;
+										border: 1px solid $color-black;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.feedContainer {
+				.feed {
+					> .inner {
+						grid-template-columns: repeat(2, 1fr);
+
+						.item {
+							max-width: unset;
+
+							.imageContainer {
+								.colorVariants {
+									display: none;
+								}
+							}
+
+							.content {
+								grid-template-columns: 1fr;
+								grid-template-areas:
+									"title"
+									"surface"
+									"description "
+									"variants "
+									"price";
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-mobile-medium) {
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer p {
+		font-size: 8px;
+		line-height: 10px;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer img,
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .featureContainer svg {
+		max-width: 25px;
+		height: auto;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .content > div > p {
+		display: block;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p {
+		line-height: 19px;
+	}
+	#productResultsFeed > .inner .feedContainer .feed > .inner .item .content p.ground-type {
+		display: none;
+	}
+	// #productResultsFeed {
+	//   > .inner {
+	//     .feedContainer {
+	//       .feed {
+	//         > .inner {
+	//           grid-template-columns: repeat(1, 1fr);
+	//         }
+	//       }
+	//     }
+	//   }
+	// }
+}

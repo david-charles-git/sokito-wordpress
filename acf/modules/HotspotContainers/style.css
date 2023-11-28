@@ -1,0 +1,634 @@
+
+#productHotspotsModule {
+    background-color: #F7F7F7;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+}
+
+#productHotspotsModule > .tabContainer {
+    padding-top: 40px;
+    width: 100%;
+    max-width: 100vw;
+}
+#productHotspotsModule > .tabContainer > .outer {
+    overflow: hidden;
+    overflow-x: scroll;
+}
+#productHotspotsModule > .tabContainer > .outer::-webkit-scrollbar {
+    display: none;
+}
+#productHotspotsModule > .tabContainer > .outer > .inner {
+    font-size: 0;
+}
+#productHotspotsModule > .tabContainer > .outer > .inner > .tab {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px;
+}
+#productHotspotsModule > .tabContainer > .outer > .inner > .tab:nth-child(1) {
+    margin-left: 0;
+}
+#productHotspotsModule > .tabContainer > .outer > .inner > .tab:nth-last-child(1) {
+    margin-right: 0;
+}
+#productHotspotsModule > .tabContainer > .outer > .inner > .tab > p {
+    padding: 1em 2em;
+    background-color: #fff;
+    cursor: pointer;
+    color: #000;
+    border-radius: 30px;
+}
+#productHotspotsModule > .tabContainer > .outer > .inner > .tab.active > p,
+#productHotspotsModule > .tabContainer > .outer > .inner > .tab:hover > p {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
+
+#productHotspotsModule > .detailsContainer {
+    width: 100%;
+    max-width: 100vw;
+}
+#productHotspotsModule > .detailsContainer > .outer {
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner {
+    position: relative;
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details {
+    opacity: 0;
+    max-width: 920px;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details.active {
+    opacity: 1
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details > .inner {
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details > .inner > h3 {
+    margin-bottom: 20px;
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details > .inner > p {
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details > .inner > ul {
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details > .inner > ul > li {
+    margin-top: 20px;
+    font-size: 0;
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details > .inner > ul > li::before {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    content: "";
+    margin-right: 10px;
+    background-image: url("../../assets/images/Icon\ ionic-ios-checkmark-orange.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details > .inner > ul > li > p {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 25px);
+}
+#productHotspotsModule > .detailsContainer > .outer > .inner > .details.reviews {
+    
+}
+
+
+
+
+
+#productHotspotsModule > .hotspotContainer  {
+    width: 100%;
+    max-width: 100vw;
+    display: none;
+}
+#productHotspotsModule > .hotspotContainer.active {
+    display: block;
+}
+#productHotspotsModule > .hotspotContainer > .outer {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "slider"
+        "colorSwitch";
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider {
+    text-align: center;
+    overflow: hidden;
+    grid-area: slider;
+    max-width: 100vw;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider::-webkit-scrollbar-track {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background: #e7e7e7;
+    border-radius: 10px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .imageContainer > .image {
+    display: grid;
+    grid-template-areas: "center";
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .imageContainer > .image > img {
+    aspect-ratio: 16 / 9;
+    -o-object-fit: cover;
+       object-fit: cover;
+    grid-area: center;
+    max-width: 700px;
+    opacity: 0;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .imageContainer > .image > img.active {
+    opacity: 1;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index:2;
+    display: none;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots.active {
+    display: block;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 3px solid #FC4F00;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    -webkit-animation: hotspotPulse 2000ms ease-in-out 0ms infinite forwards;
+            animation: hotspotPulse 2000ms ease-in-out 0ms infinite forwards;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot:hover,
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.active {
+    background-color: #FC4F00;
+    z-index: 4;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(1) {
+    top: 90px;
+    left: 360px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(2) {
+    top: 220px;
+    left: 700px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(3) {
+    top: 300px;
+    left: 540px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(4) {
+    top: 290px;
+    left: 79px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(5) {
+    top: 170px;
+    left: 20px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(6) {
+    top: 110px;
+    left: 130px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(1) {
+    top: 60px;
+    left: 280px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(2) {
+    top: 110px;
+    left: 400px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(3) {
+    top: 150px;
+    left: 520px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(4) {
+    top: 220px;
+    left: 700px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(5) {
+    top: 300px;
+    left: 540px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(6) {
+    top: 300px;
+    left: 360px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(7) {
+    top: 290px;
+    left: 300px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(8) {
+    top: 300px;
+    left: 180px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(9) {
+    top: 290px;
+    left: 60px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(10) {
+    top: 170px;
+    left: 20px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(11) {
+    top: 60px;
+    left: 50px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(12) {
+    top: 110px;
+    left: 130px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer {
+    position: absolute;
+    height: 100%;
+    width: calc((100% - 740px - 100px - 100px) / 2);
+    top: 0;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer.left {
+    left: 50px
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer.right {
+    right: 50px
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup.active {
+    display: grid;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    overflow: hidden;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content.active {
+    display: block;
+    z-index:3;
+    opacity: 1;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content > .inner {
+    max-height: 100%;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content > .inner > h5 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content > .inner > p {
+    margin-bottom: 0;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer {
+    text-align: center;
+    font-size: 0;
+    padding: 20px 0;
+    grid-area: colorSwitch;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer > .colorSwitch {
+    padding: 5px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0);
+    display: inline-block;
+    margin: 0 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer > .colorSwitch.active {
+    border: 2px solid rgba(0,0,0,1)
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer > .colorSwitch:nth-child(1) {
+    margin-left: 0;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer > .colorSwitch:nth-last-child(1) {
+    margin-right: 0;
+}
+#productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer > .colorSwitch > .inner {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+@-webkit-keyframes hotspotPulse {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes hotspotPulse {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer {
+        width: calc((100% - 540px - 100px - 100px) / 2)
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .imageContainer > .image > img {
+        max-width: 500px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(1) {
+        top: 60px;
+        left: 270px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(2) {
+        top: 160px;
+        left: 500px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(3) {
+        top: 210px;
+        left: 390px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(4) {
+        top: 200px;
+        left: 70px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(5) {
+        top: 110px;
+        left: 20px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(6) {
+        top: 70px;
+        left: 100px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(1) {
+        top: 40px;
+        left: 200px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(2) {
+        top: 70px;
+        left: 290px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(3) {
+        top: 110px;
+        left: 380px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(4) {
+        top: 160px;
+        left: 500px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(5) {
+        top: 210px;
+        left: 380px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(6) {
+        top: 210px;
+        left: 250px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(7) {
+        top: 200px;
+        left: 200px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(8) {
+        top: 210px;
+        left: 130px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(9) {
+        top: 200px;
+        left: 50px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(10) {
+        top: 120px;
+        left: 10px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(11) {
+        top: 50px;
+        left: 30px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(12) {
+        top: 70px;
+        left: 100px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer {
+        width: calc((100% - 500px - 100px - 100px) / 2)
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .imageContainer > .image > img {
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    #productHotspotsModule > .hotspotContainer > .outer > .inner {
+        grid-template-areas:
+            "colorSwitch"
+            "slider"
+            "content";
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider {
+        z-index: 2;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer {
+        position: relative;
+        width: 100%;
+        top: unset;
+        padding: 0 50px;
+        grid-area: content;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer.left,
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer.right {
+        left: 0;
+        right: unset;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup {
+        width: 100%;
+        position: relative;
+        grid-template-areas: "hotspotContent";
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content {
+        padding: 0;
+        grid-area: hotspotContent;
+        max-height: unset;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content.active {
+        transform: translateY(-100px);
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content > .inner {
+        padding: 150px 20px 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .imageContainer > .image,
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .imageContainer > .image > img {
+        height: 400px;
+        max-width: unset;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(1) {
+        top: 90px;
+        left: 380px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(2) {
+        top: 240px;
+        left: 720px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(3) {
+        top: 300px;
+        left: 560px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(4) {
+        top: 290px;
+        left: 70px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(5) {
+        top: 180px;
+        left: 20px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.description:nth-child(6) {
+        top: 110px;
+        left: 150px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(1) {
+        top: 60px;
+        left: 280px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(2) {
+        top: 110px;
+        left: 400px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(3) {
+        top: 150px;
+        left: 520px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(4) {
+        top: 220px;
+        left: 700px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(5) {
+        top: 300px;
+        left: 540px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(6) {
+        top: 300px;
+        left: 360px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(7) {
+        top: 290px;
+        left: 300px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(8) {
+        top: 300px;
+        left: 180px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(9) {
+        top: 290px;
+        left: 60px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(10) {
+        top: 170px;
+        left: 20px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(11) {
+        top: 60px;
+        left: 50px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider > .inner > .hotspots > .hotspot.materials:nth-child(12) {
+        top: 110px;
+        left: 130px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    /* #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: unset !important;
+        left: unset !important;
+        right: unset !important;
+        padding: 0;
+        background-color: unset;
+    } */
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .contentContainer > .contentGroup > .content > .inner {
+        overflow-y: hidden;
+        max-width: unset;;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer {
+        padding: 10px 0;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer > .colorSwitch {
+        margin: 0 5px;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .colorSwitchContainer > .colorSwitch > .inner {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    #productHotspotsModule > .hotspotContainer > .outer {
+        justify-content: start;
+    }
+    #productHotspotsModule > .hotspotContainer > .outer > .inner > .slider {
+        overflow-x: scroll;
+    }
+}

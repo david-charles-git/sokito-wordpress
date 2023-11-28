@@ -1,0 +1,24 @@
+Assests / Information Required :
+    Font files in woff and woff2 formats for the dispaly font (Gza) and the body font (Ubivers LT Std) - the style guide claims they are on google fonts but they are not there as far as I can see - additioanlly self hosting fonts is better for GDPR and page speed.
+
+Requiremnts :
+    container :
+        The max width of the content is as per style guide
+        The content is split into two asymemtrical columns on desktop and tablet - title left, quote right
+        The content is contained within a single column on mobile - title top, quote bottom
+    
+    title :
+        This will be a h3 tag - the font size and style of a h3 in the style guide is incorrect for this container, therefore I have given it the classes font-large and font-body to make it the given font style of an large body element (see style guide)
+        The max width of this container is 420px
+        The color of the title is white (#000000)
+    
+    quote : 
+        The Quotation mark will be styled sollowing the h2 sizings but with the body font and a font-weight of normal as this has the closest font style to the design and is colored #000000.
+        The Quote is styles like a large body copy element except that is has a light font weight and has an oblique font style - it is also colored green (#48A18A);
+        The content is center aligned.
+
+Variables Required ( for dev ) :
+    hasCustomClass
+    customclass
+    title
+    quote

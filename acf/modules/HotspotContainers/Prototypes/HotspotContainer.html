@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="../../../CSS/generalStyles.css" />
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        
+        <!-- Scripts -->
+        <script src="../scripts.js"></script>
+    </head>
+
+    <body style="margin: 0;">
+        <main style="padding-top: 150px;">
+            <section id="productHotspotsModule">
+                <div id="tabContainer" class="tabContainer">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="tab active" onclick="handleViewChange(this)" data-name="description">
+                                <p class="">Description</p>
+                            </div>
+
+                            <div class="tab" onclick="handleViewChange(this)" data-name="materials">
+                                <p class="">Materials</p>
+                            </div>
+
+                            <div class="tab" onclick="handleViewChange(this)" data-name="reviews">
+                                <p class="">Reviews(<span id="reviewContainer">XX</span>)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="detailsContainer" class="detailsContainer">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="details active" data-name="description">
+                                <div class="inner">
+                                    <h3>Description</h3>
+
+                                    <p>
+										Devista is born to be a menace. It’s handcrafted with specialised components that allow you to keep the ball at your feet and away from opponents.
+                                        <br /><br /> 
+										It’s engineered from sustainably-sourced, high performance materials to keep your game impacting the pitch, rather than the planet.
+                                        <br /><br />
+										The result? A performance boot that changes the game.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="details" data-name="materials">
+                                <div class="inner">
+                                    <h3>Materials</h3>
+
+                                    <p>
+                                        Here at Sokito we’re proud to offer the most eco-friendly football boots in the world, but due to current material limitations and the fact that we never compromise on performance, our boots are not yet 100% sustainable.
+                                        <br /><br />
+										As a planet positive brand, we’re committed to transparency. Here are the materials that we currently have to use but are working hard to find alternatives for:
+                                    </p>
+
+                                    <ul>
+                                        <li>
+                                            <p>Stud tips – Virgin TPU – To guarantee abrasion resistance.</p>
+                                        </li>
+
+                                        <li>
+                                            <p>Lasting insole – Polypropylene – To avoid stud pressure.</p>
+                                        </li>
+
+                                        <li>
+                                            <p>Eyestay reinforcement - Fibreglass – To make sure lace holes don’t tear.</p>
+                                        </li>
+
+                                        <li>
+                                            <p>Foam padding – Virgin materials – For consistent softness and rebound.</p>
+                                        </li>
+
+                                        <li>
+                                            <p>Adhesive – Solvent based – To keep the boot in one piece.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="details reviews" data-name="reviews">
+                                <div class="inner">
+                                    <h3>Reviews</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hotspotContainer" class="hotspotContainer active">                
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="contentContainer left">
+                                <div class="contentGroup active" data-name="description">
+                                    <div class="content description" data-id="description-3">
+                                        <div class="inner">
+                                            <h5 class=""><span>Development</span> period</h5>
+
+                                            <p>Instead of designing a boot only to find out it wasn’t possible to make it eco-friendly, we reverse engineered a boot and packed as many eco-friendly materials into the shoe as possible. Each material factored in Performance, Planet and Price to give us the optimal performance boot..</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content description" data-id="description-4">
+                                        <div class="inner">
+                                            <h5 class=""><span>Tech</span> specs</h5>
+
+                                            <p>"Weight: 214g (comparatively speaking, this is similar to a Nike Mercurial, the most recognisable lightweight speed boot on the market)<br />
+                                                Soleplate: FG (Firm ground) - For hard, dry grass and artificial turf surfaces.<br />
+                                                SG (Soft ground) - Made for the UK’s wintery months, when playing surfaces are more of a swamp than a pitch. (Soft, Muddy and wet grass surfaces)."</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content description" data-id="description-5">
+                                        <div class="inner">
+                                            <h5 class=""><span>Non-slip</span> grip</h5>
+
+                                            <p>Our eco-suede lining is 85% recycled polyester, sourced from discarded plastic bottles. The material has a suede type texture, for a super soft ‘slipper-like’ touch and a non-slip grippy texture, to lock the foot into place.</p>
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <div class="contentGroup" data-name="materials">
+                                    <div class="content materials" data-id="materials-6">
+                                        <div class="inner">
+                                            <h5 class=""><span>Development</span> period</h5>
+
+                                            <p>Instead of designing a boot only to find out it wasn’t possible to make it eco-friendly, we reverse engineered a boot and packed as many eco-friendly materials into the shoe as possible. Each material factored in Performance, Planet and Price to give us the optimal performance boot..</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-7">
+                                        <div class="inner">
+                                            <h5 class=""><span>Tech</span> specs</h5>
+
+                                            <p>"Weight: 214g (comparatively speaking, this is similar to a Nike Mercurial, the most recognisable lightweight speed boot on the market)<br />
+                                                Soleplate: FG (Firm ground) - For hard, dry grass and artificial turf surfaces.<br />
+                                                SG (Soft ground) - Made for the UK’s wintery months, when playing surfaces are more of a swamp than a pitch. (Soft, Muddy and wet grass surfaces)."</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-8">
+                                        <div class="inner">
+                                            <h5 class=""><span>Non-slip</span> grip</h5>
+
+                                            <p>Our eco-suede lining is 85% recycled polyester, sourced from discarded plastic bottles. The material has a suede type texture, for a super soft ‘slipper-like’ touch and a non-slip grippy texture, to lock the foot into place.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-9">
+                                        <div class="inner">
+                                            <h5 class=""><span>Development</span> period</h5>
+
+                                            <p>Instead of designing a boot only to find out it wasn’t possible to make it eco-friendly, we reverse engineered a boot and packed as many eco-friendly materials into the shoe as possible. Each material factored in Performance, Planet and Price to give us the optimal performance boot..</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-10">
+                                        <div class="inner">
+                                            <h5 class=""><span>Tech</span> specs</h5>
+
+                                            <p>"Weight: 214g (comparatively speaking, this is similar to a Nike Mercurial, the most recognisable lightweight speed boot on the market)<br />
+                                                Soleplate: FG (Firm ground) - For hard, dry grass and artificial turf surfaces.<br />
+                                                SG (Soft ground) - Made for the UK’s wintery months, when playing surfaces are more of a swamp than a pitch. (Soft, Muddy and wet grass surfaces)."</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-11">
+                                        <div class="inner">
+                                            <h5 class=""><span>Non-slip</span> grip</h5>
+
+                                            <p>Our eco-suede lining is 85% recycled polyester, sourced from discarded plastic bottles. The material has a suede type texture, for a super soft ‘slipper-like’ touch and a non-slip grippy texture, to lock the foot into place.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider">
+                                <div class="inner">
+                                    <div class="imageContainer">
+                                        <div class="image">
+                                            <img class="active" src="../../../assets/images/sokitoBoot-16-9-1.webp" alt="" data-id="0" />
+                                            <img src="../../../assets/images/sokitoBoot-16-9-2.webp" alt="" data-id="1"/>
+                                            <img src="../../../assets/images/sokitoBoot-16-9-3.webp" alt="" data-id="2"/>
+                                            <img src="../../../assets/images/sokitoBoot-16-9-4.webp" alt="" data-id="3"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="hotspots active" data-name="description">
+                                        <div class="hotspot description" data-id="description-0" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot description" data-id="description-1" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot description" data-id="description-2" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot description" data-id="description-3" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot description" data-id="description-4" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot description" data-id="description-5" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+                                    </div>
+
+                                    <div class="hotspots" data-name="materials">
+                                        <div class="hotspot materials" data-id="materials-0" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-1" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-2" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-3" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-4" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-5" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-6" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-7" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-8" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-9" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-10" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+
+                                        <div class="hotspot materials" data-id="materials-11" onmouseenter="showHotspotCardHover(this)" onmouseleave="handleMouseLeave()" onclick="showHotspotCardClick(this)"></div>
+                                    </div>
+                                </div>  
+                            </div>
+
+                            <div class="contentContainer right">
+                                <div class="contentGroup active" data-name="description">
+                                    <div class="content" data-id="description-0">
+                                        <div class="inner">
+                                            <h5 class=""><span>Engineered</span> lacing system</h5>
+
+                                            <p>Off-centre lacing opens surface area on the medial side of the shoe (the strike zone), allowing for cleaner contact,higher levels of control and greater shot power.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content" data-id="description-1">
+                                        <div class="inner">
+                                            <h5 class=""><span>Comfort</span> tow padding</h5>
+
+                                            <p>The ‘package’ (combination of materials) in the toe area has been specifically designed to optimise both comfort and performance, with a mix of soft upper materials and strategically placed padding and protection.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content" data-id="description-2">
+                                        <div class="inner">
+                                            <h5 class=""><span>Crafted</span> by hand</h5>
+
+                                            <p>European production allows for tighter controls on quality and employee working conditions, whilst minimising supply chain emissions. Our handmade production methods allow us to maximise material optimisation, ensuring less waste materials.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contentGroup" data-name="materials">
+                                    <div class="content materials" data-id="materials-0">
+                                        <div class="inner">
+                                            <h5 class=""><span>Development</span> period</h5>
+
+                                            <p>Instead of designing a boot only to find out it wasn’t possible to make it eco-friendly, we reverse engineered a boot and packed as many eco-friendly materials into the shoe as possible. Each material factored in Performance, Planet and Price to give us the optimal performance boot..</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-1">
+                                        <div class="inner">
+                                            <h5 class=""><span>Tech</span> specs</h5>
+
+                                            <p>"Weight: 214g (comparatively speaking, this is similar to a Nike Mercurial, the most recognisable lightweight speed boot on the market)<br />
+                                                Soleplate: FG (Firm ground) - For hard, dry grass and artificial turf surfaces.<br />
+                                                SG (Soft ground) - Made for the UK’s wintery months, when playing surfaces are more of a swamp than a pitch. (Soft, Muddy and wet grass surfaces)."</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-2">
+                                        <div class="inner">
+                                            <h5 class=""><span>Non-slip</span> grip</h5>
+
+                                            <p>Our eco-suede lining is 85% recycled polyester, sourced from discarded plastic bottles. The material has a suede type texture, for a super soft ‘slipper-like’ touch and a non-slip grippy texture, to lock the foot into place.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-3">
+                                        <div class="inner">
+                                            <h5 class=""><span>Development</span> period</h5>
+
+                                            <p>Instead of designing a boot only to find out it wasn’t possible to make it eco-friendly, we reverse engineered a boot and packed as many eco-friendly materials into the shoe as possible. Each material factored in Performance, Planet and Price to give us the optimal performance boot..</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-4">
+                                        <div class="inner">
+                                            <h5 class=""><span>Tech</span> specs</h5>
+
+                                            <p>"Weight: 214g (comparatively speaking, this is similar to a Nike Mercurial, the most recognisable lightweight speed boot on the market)<br />
+                                                Soleplate: FG (Firm ground) - For hard, dry grass and artificial turf surfaces.<br />
+                                                SG (Soft ground) - Made for the UK’s wintery months, when playing surfaces are more of a swamp than a pitch. (Soft, Muddy and wet grass surfaces)."</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content materials" data-id="materials-5">
+                                        <div class="inner">
+                                            <h5 class=""><span>Non-slip</span> grip</h5>
+
+                                            <p>Our eco-suede lining is 85% recycled polyester, sourced from discarded plastic bottles. The material has a suede type texture, for a super soft ‘slipper-like’ touch and a non-slip grippy texture, to lock the foot into place.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="colorSwitchContainer">
+                                <div class="colorSwitch active" onclick="handleColorSwicth(this)" data-id="0">
+                                    <div class="inner" style="background: green;"></div>
+                                </div>
+
+                                <div class="colorSwitch" onclick="handleColorSwicth(this)"  data-id="1">
+                                    <div class="inner" style="background: red;"></div>
+                                </div>
+
+                                <div class="colorSwitch" onclick="handleColorSwicth(this)"  data-id="2">
+                                    <div class="inner" style="background: blue;"></div>
+                                </div>
+
+                                <div class="colorSwitch" onclick="handleColorSwicth(this)"  data-id="3">
+                                    <div class="inner" style="background: yellow;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </body>
+</html> 

@@ -1,0 +1,1402 @@
+
+
+@media (max-width: 991px){
+	.usu-basket-margin {
+    margin: 0px;
+}
+	
+	.mar_btm_10px{
+		margin-bottom: 10px !important;
+	}
+	.text_padd_secnd {
+		padding: 12px 0px !important;
+	}
+	.section_fourth .carousel-control-prev {
+		left: 0px !important;
+	}
+	.section_fourth .carousel-control-next {
+		right: 0px !important;
+	}
+	.col_padd_lr{
+		padding: 0px 0px !important;
+	}
+	.sub_sec_padd {
+		padding: 0px 40px !important;
+	}
+	.text_padd_mob{
+		padding: 0px 10px 50px !important;
+	}
+	.one_fifth{
+		padding: 0px 5px !important;
+	}
+	.lang_slect{
+		/*display: none !important;*/
+	}
+	.centrd_text{
+		position: relative !important;
+	}
+	.slid_img_plastic{
+		width: 100%;
+		max-width: 20px !important;
+	}
+	.slid_img_oil{
+		width: 100%;
+		max-width: 30px !important;
+	}
+	.marg_top80_res{
+		margin-top: 0px !important;
+	}
+	.width60{
+		width: 100% !important;
+	}
+	.img_padd_30{
+		padding: 0px 30px 30px !important;
+	}
+	.box-dashed-line1:before{
+		display: none !important;
+	}
+	.box-dashed-line2:after{
+		display: none !important;
+	}
+	.box-dashed-line3:after{
+		display: none !important;
+	}
+	.section_frst_sp{
+		height: auto !important;
+	}
+}
+
+
+/*
+ * Desktop 
+ */
+ @media (min-width: 1024px){
+	 
+	 .faqhe{
+		font-size: 16px !important;
+	 }
+	 .ucdls{
+	 max-width: 130px !important;
+ }
+	 .fweb{
+		font-size: 11px !important;
+	 }
+	 .product-logo-big {
+    max-width: 300px !important;
+}
+	.product_desc{
+	height: 410px !important;
+}
+	 .usu-label-font{
+	font-size: 12px !important;
+
+}
+	 .usu-footwear-text-div{
+	 padding: 45px 0px 50px 0px !important;
+  }
+  .usu-inst-featured-text{
+	  font-size: 20px !important;
+  }
+  .usu-for-chance{
+	  font-size: 9px !important;
+  }
+	 .premium-materials-padding{
+	padding: 20px 120px;
+}
+	 .usu_shoes_description{
+	padding-left: 15% !important;
+}
+.usu-margin-top-product-desc1{
+	padding: 60px 0px 60px !important;
+}
+.usu-margin-top-product-desc2{
+	padding: 10px 0px 45px !important;
+}
+.usu-margin-top-product-desc3{
+	padding: 30px 0px 30px !important;
+}
+.usu-margin-top-product-desc4{
+	padding: 25px 0px 30px !important;
+}
+.usu-margin-top-product-desc5{
+	padding: 35px 0px 30px !important;
+}
+.usu-margin-top-product-desc6{
+	padding: 10px 0px 40px !important;
+}
+	 .usu-right-text-padding{
+	padding: 20px 180px 20px 20px !important;
+}
+	 .usu-bottle-width{
+	width: 70px !important;
+}
+	 .usu-products-img-other{
+	width: 100px !important;
+}
+
+	 .usu-slider-top-left p {
+    font-size: 65px !important;
+ }
+.usu-slider-para-div{
+	font-size: 8px !important;
+}
+	 .usu-slider-back-color{
+	padding: 20px 0px !important;
+}
+	 .usu-footwear-name-player p{
+	font-size: 12px !important;
+}
+	 .owl-item-new{
+	padding: 0px 40px !important;
+}
+	 .owl-nav .owl-prev{
+		 font-size: 50px !important;
+	 }
+	 .owl-nav .owl-next{
+		 font-size: 50px !important;
+	 }
+	 .usu-brand-name-padding img{
+	width: 100px !important;
+}
+	
+	 .usu_footwear_menu {
+       width: 108% !important;
+}
+	 
+ .basket_icon img {
+	 width: 13px !important;
+ }
+.user_icon {
+    padding: 0px 8px !important;
+}
+.user_icon img{
+     width: 15px !important;
+}
+
+.navbar-brand>img {
+	max-width: 90px !important;
+}
+
+.sub-menu1 li {
+	padding: 0px !important;
+}
+	 .usu-caption-text-on-imgh2 {
+      font-size: 30px !important;
+  }
+  .usu-caption-text-on-product{
+	   font-size: 20px !important;
+  }
+  .usu-caption-text-on-imgh3 {
+    font-size: 16px !important;
+    
+}
+
+.text_banner {
+	top: 180px !important;
+}
+.usu-mid-content{
+  padding: 20px 20px 20px 100px !important;
+}
+.usu-mid-content p {
+    font-size: 15px !important;
+  }
+  .usu-heading-orange {
+    font-size: 20px !important;
+  }
+  .usu-products-black {
+	  font-size: 20px !important;
+	  
+  }
+  .usu-pdt {
+	  font-size: 23px !important;
+  }
+  .usu-login-heading{
+	  font-size: 25px !important;
+  }
+  .usu-products-parag {
+    font-size: 9px !important;
+	}
+.usu-products-parag2 {
+    font-size: 10px !important;
+   }
+.usu-not-at-all {
+    padding: 50px 10px 50px 10px !important;
+}
+.hero-playlist {
+    margin-top: 50px !important;
+}
+ 
+.usu-but-at-all-sub-div {
+    margin-top: 60px !important;
+    /* padding: 0px 100px 100px; */
+}
+.usu-left-text-padding {
+    padding: 100px 0px 0px 250px !important;
+}
+.footer_coman h4 {
+    font-size: 11px !important;
+ }
+ .footer_coman a{
+	 font-size: 12px !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+	
+		 font-size: 10px !important;
+	 }
+	 .sub-menu1 li a{
+		 font-size: 8px !important;
+	 }
+	 .sub_own select option {
+		  font-size: 10px !important;
+	 }
+	
+	.section_fourth .carousel-control-prev {
+		left: -50px !important;
+	}
+	.section_fourth .carousel-control-next {
+		right: -50px !important;
+	}
+	.section_frst_sp{
+			height: 600px !important;
+		}
+}
+@media (min-width: 1280px){
+	.faqhe{
+		font-size: 18px !important;
+	 }
+	.fz29{
+	font-size: 17px !important;
+}
+.fz20{
+	font-size: 12px !important;
+}
+	.procut {
+   	max-width: 450px !important;
+}
+	 .ucdls{
+	 max-width: 140px !important;
+ }
+	.fweb{
+		font-size: 12px !important;
+	 }
+	.product-logo-big {
+    max-width: 480px !important;
+}
+	.product_desc{
+	height: 500px !important;
+}
+	.usu-label-font{
+	font-size: 13px !important;
+
+}
+.forgot-text-font{
+	font-size: 9px !important;
+}
+	.usu-footwear-text-div{
+	 padding: 45px 0px 50px 0px !important;
+  }
+  .usu-inst-featured-text{
+	  font-size: 20px !important;
+  }
+  .usu-for-chance{
+	  font-size: 9px !important;
+  }
+	.premium-materials-padding{
+	padding: 20px 140px;
+}
+	.usu_shoes_description{
+	padding-left: 17% !important;
+}
+.usu-margin-top-product-desc1{
+	padding: 80px 0px 65px !important;
+}
+.usu-margin-top-product-desc2{
+	padding: 20px 0px 70px !important;
+}
+.usu-margin-top-product-desc3{
+	padding: 25px 0px 45px !important;
+}
+.usu-margin-top-product-desc4{
+	padding: 20px 0px 40px !important;
+}
+.usu-margin-top-product-desc5{
+	padding: 40px 0px 40px !important;
+}
+.usu-margin-top-product-desc6{
+	padding: 0px 0px 40px !important;
+}
+	 .usu-slider-top-left p {
+    font-size: 90px !important;
+  }
+.usu-slider-para-div{
+	font-size: 8px !important;
+}
+	 .usu-slider-back-color{
+	padding: 20px 0px !important;
+}
+	 .usu-footwear-name-player p{
+	font-size: 12px !important;
+}
+	 .owl-item-new{
+	padding: 0px 40px !important;
+}
+	 .owl-nav .owl-prev{
+		 font-size: 50px !important;
+	 }
+	 .owl-nav .owl-next{
+		 font-size: 50px !important;
+	 }
+	 .usu-brand-name-padding img{
+	width: 100px !important;
+}
+/*.usu-margin-top-product-desc1{
+	padding: 60px 0px 25px;
+}
+.usu-margin-top-product-desc2{
+	padding: 0px 0px 20px;
+}
+.usu-margin-top-product-desc3{
+	padding: 0px 0px 80px;
+}
+.usu-margin-top-product-desc4{
+	padding: 0px 0px 70px;
+}
+.usu-margin-top-product-desc5{
+	padding: 0px 0px 70px;
+}*/
+	 .usu_footwear_menu {
+       width: 108% !important;
+}
+	 
+ .basket_icon img {
+	 width: 13px !important;
+ }
+.user_icon {
+    padding: 0px 8px !important;
+}
+.user_icon img{
+     width: 15px !important;
+}
+
+.navbar-brand>img {
+	max-width: 90px !important;
+}
+
+.sub-menu1 li {
+	padding: 0px !important;
+}
+	 .usu-caption-text-on-imgh2 {
+      font-size: 42px !important;
+  }
+  .usu-caption-text-on-product{
+	   font-size: 32px !important;
+  }
+  .usu-caption-text-on-imgh3 {
+    font-size: 22px !important;
+    
+}
+
+.text_banner {
+	top: 180px !important;
+}
+.usu-mid-content p {
+    font-size: 22px !important;
+  }
+  .usu-heading-orange {
+    font-size: 25px !important;
+  }
+  .usu-products-black {
+	  font-size: 25px !important;
+ }
+ .usu-pdt {
+	  font-size: 28px !important;
+  }
+  .usu-bottle-width {
+    width: 80px !important;
+}
+.usu-products-img-other{
+	width: 110px !important;
+}
+.usu-right-text-padding {
+    padding: 60px 220px 20px 20px !important;
+}
+.usu-left-text-padding {
+    padding: 60px 0px 20px 180px !important;
+}
+  .usu-products-parag {
+    font-size: 10px !important;
+	}
+.usu-products-parag2 {
+    font-size: 10px !important;
+  }
+.usu-not-at-all {
+    padding: 50px 10px 50px 10px !important;
+}
+.hero-playlist {
+    margin-top: 50px !important;
+}
+ 
+.usu-but-at-all-sub-div {
+    margin-top: 60px !important;
+    /* padding: 0px 100px 100px; */
+}
+
+.footer_coman h4 {
+    font-size: 11px !important;
+ }
+ .footer_coman a{
+	 font-size: 12px !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+	
+		 font-size: 10px !important;
+	 }
+	 .sub-menu1 li a{
+		 font-size: 7px !important;
+	 }
+	 .sub_own select option {
+		  font-size: 10px !important;
+	 }
+
+}
+@media (min-width: 1366px){
+	.section_fourth .carousel-control-prev {
+		left: -70px !important;
+	}
+	.section_fourth .carousel-control-next {
+		right: -70px !important;
+	}
+	.ucdls{
+		max-width: 165px !important;
+	}
+	.faqhe{
+		font-size: 20px !important;
+	 }
+	.fz29{
+	font-size: 20px !important;
+}
+.fz20{
+	font-size: 14px !important;
+}
+	.colorf{
+	font-size: 7px !important;
+}
+	.usu-rp{
+	font-size: 11px !important;
+	}
+	.fweb{
+		font-size: 13px !important;
+	 }
+	.product-logo-big {
+    max-width: 550px !important;
+}
+	.usu-font-size{
+	font-size: 12px !important;
+}
+	
+	.w-100 {
+   	max-width: 400px !important;
+}
+.carousel-thumbnails .carousel-indicators img {
+    max-width: 150px !important;
+}
+.carousel-thumbnails .carousel-indicators li {
+	width: 150px !important;
+    max-width: 150px !important;
+	}
+	.usu-how-it-work-mob-icon{
+	max-width: 110px !important;
+}
+	.usu-footwear-popup-form-container input[type=text], input[type=password] {
+		font-size: 11px !important;
+	}
+	.forgot-text-font{
+	font-size: 10px !important;
+}
+	.usu-flex-total1{
+		 bottom: 40px !important;
+	}
+	.usu-padding-item{
+	padding-bottom: 10px !important;
+}
+.usu-flex-total2{
+	 bottom: 40px !important;
+}
+	.usu-basket-images{
+	min-width: 170px !important;
+}
+	
+
+	 
+	 .usu-footwear-form-container input[type=submit] {
+		 font-size: 9px !important;
+	 }
+	 
+	 .usu-slider-top-left p {
+    font-size: 95px !important;
+  }
+	.usu-right-text-padding {
+    padding: 70px 240px 20px 20px !important;
+}
+.usu-left-text-padding {
+    padding: 70px 0px 20px 280px !important;
+}
+	.usu_shoes_description{
+	padding-left: 18% !important;
+}
+.usu-margin-top-product-desc1{
+	padding: 85px 0px 65px !important;
+}
+.usu-margin-top-product-desc2{
+	padding: 20px 0px 65px !important;
+}
+.usu-margin-top-product-desc3{
+	padding: 35px 0px 50px !important;
+}
+.usu-margin-top-product-desc4{
+	padding: 20px 0px 60px !important;
+}
+.usu-margin-top-product-desc5{
+	padding: 25px 0px 60px !important;
+}
+.usu-margin-top-product-desc6 {
+    padding: 0px 0px 40px;
+}	 
+  .usu-caption-text-on-imgh2 {
+      font-size: 47px !important;
+  }
+  .usu-caption-text-on-product{
+	   font-size: 37px !important;
+  }
+  .usu-caption-text-on-imgh3 {
+    font-size: 24px !important;
+    
+}
+.copy_right {
+    font-size: 8px !important;
+ }
+.usu-products-parag {
+    font-size: 12px !important;
+   }
+.usu-heading-orange {
+    font-size: 27px !important;
+ }
+.usu-products-black {
+    font-size: 27px !important;
+  }
+  .usu-pdt {
+	  font-size: 30px !important;
+  }
+.text_banner {
+	top: 230px !important;
+}
+
+}
+@media (min-width: 1440px){
+	.faq_accor .panel-title {	
+  padding: 10px 45px !important;
+}
+	.faqhe{
+		font-size: 24px !important;
+	 }
+	.qty .form-control {
+	height: 30px !important;
+}
+
+.qty .btn {
+     padding: 4px 8px !important;
+}
+	.fz29{
+	font-size: 23px !important;
+}
+.fz20{
+	font-size: 16px !important;
+}
+	.procut {
+   	max-width: 550px !important;
+}
+	.addot .checkmark:after {
+ 	top: 10px !important;
+	left: 10px !important;
+	width: 10px !important;
+	height: 10px !important;
+}
+	.addot{
+	margin-bottom: 10px !important;
+}
+	.addot .checkmark {
+  left: -7px !important;
+  height: 30px !important;
+  width: 30px !important;
+ }
+ .addot .checkmark_img {
+  height: 30px !important;
+  width: 30px !important;
+ }
+	
+	.usu-rp{
+	font-size: 12px !important;
+	}
+	.fweb{
+		font-size: 14px !important;
+	 }
+	.product-logo-big {
+    max-width: 600px !important;
+}
+	.usu-font-size{
+	font-size: 13px !important;
+}
+	.product_desc{
+	height: 590px !important;
+}
+	.w-100 {
+   	max-width: 450px !important;
+}
+.carousel-thumbnails .carousel-indicators img {
+    max-width: 160px !important;
+}
+.carousel-thumbnails .carousel-indicators li {
+	width: 160px !important;
+    max-width: 160px !important;
+	}
+	.access-note{
+	font-size: 7px !important;
+}
+	.usu-how-it-work-mob-icon{
+	max-width: 120px !important;
+}
+	.select-wrapper:after {
+		top: 35px !important;
+	}
+	.usu-label-font{
+	font-size: 15px !important;
+
+}
+
+.usu-margin-top-product-desc1{
+	padding: 90px 0px 55px !important;
+}
+.usu-margin-top-product-desc2{
+	padding: 40px 0px 60px !important;
+}
+.usu-margin-top-product-desc3{
+	padding: 40px 0px 35px !important;
+}
+.usu-margin-top-product-desc4{
+	padding: 40px 0px 30px !important;
+}
+.usu-margin-top-product-desc5{
+	padding: 60px 0px 40px !important;
+}
+.usu-margin-top-product-desc6 {
+    padding: 10px 0px 40px !important;
+}
+	 .usu-slider-top-left p {
+    font-size: 95px !important;
+ }
+.usu-slider-para-div{
+	font-size: 9px !important;
+}
+	  .usu-slider-top-left p {
+    font-size: 110px !important;
+ }
+.usu-slider-para-div{
+	font-size: 10px !important;
+}
+	 .usu-footwear-name-player p{
+	font-size: 14px !important;
+}
+	 .owl-nav .owl-prev{
+		 font-size: 60px !important;
+	 }
+	 .owl-nav .owl-next{
+		 font-size: 60px !important;
+	 }
+	  .premium-materials-padding{
+	padding: 20px 140px !important;
+}
+	  .usu_footwear_menu {
+       width: 108% !important;
+}
+	 
+ .basket_icon img {
+	 width: 14px !important;
+ }
+.user_icon {
+    padding: 0px 10px !important;
+}
+.user_icon img{
+     width: 17px !important;
+}
+
+.navbar-brand>img {
+	max-width: 100px !important;
+}
+/*.navbar-default .navbar-nav>li>a {
+	padding: 25px 25px 10px !important;
+}*/
+.sub-menu1 li {
+	padding: 2px 4px !important;
+}
+	 .usu-caption-text-on-imgh2 {
+      font-size: 50px !important;
+  }
+  .usu-caption-text-on-product{
+	   font-size: 40px !important;
+  }
+  .usu-caption-text-on-imgh3 {
+    font-size: 26px !important;
+	 }
+
+.usu-mid-content p {
+    font-size: 28px !important;
+  }
+  .usu-heading-orange {
+    font-size: 35px !important;
+  }
+  .usu-pdt {
+	  font-size: 38px !important;
+  }
+  .usu-login-heading{
+	  font-size: 40px !important;
+  }
+  .usu-bottle-width {
+    width: 100px !important;
+}
+.usu-products-img-other {
+    width: 130px !important;
+}
+  .usu-products-black {
+	  font-size: 35px !important;
+  }
+  .usu-products-parag {
+    font-size: 13px !important;
+	margin-top: 15px !important;
+}
+.usu-products-parag2 {
+    font-size: 12px !important;
+  }
+.usu-not-at-all {
+    padding: 65px 10px 65px 10px !important;
+}
+.hero-playlist {
+    margin-top: 65px !important;
+}
+ 
+.usu-but-at-all-sub-div {
+    margin-top: 70px !important;
+    /* padding: 0px 100px 100px; */
+}
+.navbar-default .navbar-nav>li>a {
+		font-size: 11px !important;
+ }
+	 .sub-menu1 li a{
+		 font-size: 9px !important;
+ }
+ .sub_own select option {
+		  font-size: 11px !important;
+	 }
+
+.usu-products-leftimg img{
+	width: 85% !important;
+}
+
+
+.copy_right {
+	font-size: 8px !important;
+}
+.footer_coman h4 {
+    font-size: 13px !important;
+ }
+ .footer_coman a{
+	 font-size: 14px !important;
+}
+.usu-right-text-padding {
+    padding: 90px 240px 20px 20px !important;
+}
+.usu-left-text-padding {
+    padding: 90px 0px 20px 280px !important;
+}
+.objecturl {
+    height: 650px !important;
+}
+.font_size_13{
+	font-size: 14px !important;
+}
+}
+
+
+}
+@media (min-width: 1680px){
+	.lh25px{
+	line-height: 30px !important;
+}
+
+	.section_frst_sp{
+			height: 650px !important;
+		}
+	.wid_50px{
+		width: 75px !important;
+	}
+	.faq_accor .panel-title {	
+  padding: 10px 50px !important;
+}
+	.faqhe{
+		font-size: 28px !important;
+	 }
+	.fz29{
+	font-size: 26px !important;
+}
+.fz20{
+	font-size: 18px !important;
+}
+	.procut {
+   	max-width: 650px !important;
+}
+	.addot .checkmark:after {
+ 	top: 12px !important;
+	left: 12px !important;
+	width: 12px !important;
+	height: 12px !important;
+}
+	.addot{
+	margin-bottom: 15px !important;
+}
+	.addot .checkmark {
+  left: -9px !important;
+  height: 35px !important;
+  width: 35px !important;
+ }
+ .addot .checkmark_img {
+   height: 35px !important;
+  width: 35px !important;
+ }
+	.colorf{
+	font-size: 8px !important;
+}
+	.usu-rp{
+	font-size: 13px !important;
+	}
+	.fweb{
+		font-size: 15px !important;
+	 }
+	.product-logo-big {
+    max-width: 750px !important;
+}
+	.usu-font-size{
+	font-size: 14px !important;
+}
+
+	.product_desc{
+	height: 640px !important;
+}
+	.learn_more_margin1{
+	margin-top: 90px !important;
+}
+	.w-100 {
+     max-width: 500px !important;
+}
+.w-100-logo {
+    max-width: 180px !important;
+}
+.carousel-thumbnails .carousel-indicators img {
+    max-width: 180px !important;
+}
+.carousel-thumbnails .carousel-indicators li {
+	width: 180px !important;
+    max-width: 180px !important;
+	padding: 0px 20px !important;
+}
+	
+	.usu-how-it-work-mob-icon{
+	max-width: 130px !important;
+}
+	.radio_payment_img1{
+	max-width: 80px !important;
+}
+.radio_payment_img2{
+	max-width: 50px !important;
+}
+	.usu-footwear-popup-form-container input[type=text], input[type=password] {
+		font-size: 12px !important;
+	}
+	.forgot-text-font{
+	font-size: 12px !important;
+}
+	.usu-flex-total1{
+		 bottom: 45px !important;
+	}
+	.usu-padding-item{
+	padding-bottom: 14px !important;
+}
+.usu-flex-total2{
+	 bottom: 45px !important;
+}
+	.usu-bottom-minus{
+	/*margin-top:-7px !important;*/
+}
+	.usu-basket-images{
+	min-width: 185px !important;
+}
+	.usu-label-font{
+	font-size: 16px !important;
+
+}
+
+.usu-button-font{
+	 font-size: 10px !important;
+}
+	
+
+.usu-right-text-padding {
+    padding: 20px 260px 20px 20px !important;
+}
+.usu-margin-top-product-desc1{
+	padding: 100px 0px 75px !important;
+}
+.usu-margin-top-product-desc2{
+	padding: 40px 0px 75px !important;
+}
+.usu-margin-top-product-desc3{
+	padding: 40px 0px 45px !important;
+}
+.usu-margin-top-product-desc4{
+	padding: 40px 0px 55px !important;
+}
+.usu-margin-top-product-desc5{
+	padding: 50px 0px 60px !important;
+}
+.usu-margin-top-product-desc6{
+	padding: 10px 0px 40px !important;
+}
+.usu-right-text-padding {
+    padding: 110px 300px 20px 20px !important;
+}
+.usu-left-text-padding {
+    padding: 110px 0px 20px 350px !important;
+}
+
+	.usu-slider-top-left p {
+    font-size: 122px !important;
+  }
+.usu-slider-para-div{
+	font-size: 9px !important;
+}
+	  .usu-footwear-name-player p{
+	font-size: 16px !important;
+}
+	  .owl-nav .owl-prev{
+		 font-size: 70px !important;
+	 }
+	 .owl-nav .owl-next{
+		 font-size: 70px !important;
+	 }
+	  .premium-materials-padding{
+	padding: 20px 180px !important;
+}
+	  .navbar {
+margin-bottom: 7px !important;
+}
+	  
+	  .usu_footwear_menu {
+       width: 110% !important;
+}
+	
+ .basket_icon img {
+	 width: 15px !important;
+ }
+.user_icon {
+    padding: 0px 12px !important;
+}
+.user_icon img{
+     width: 18px !important;
+}
+
+.navbar-brand>img {
+	max-width: 125px !important;
+}
+/*.navbar-default .navbar-nav>li>a {
+	padding: 25px 30px 10px !important;
+}*/
+.sub-menu1 li {
+	padding: 2px 4px !important;
+}
+	  .usu-caption-text-on-imgh2 {
+      font-size: 60px !important;
+  }
+  .usu-caption-text-on-product{
+	   font-size: 50px !important;
+  }
+  .usu-caption-text-on-imgh3 {
+    font-size: 28px !important;
+	
+ }
+
+.usu-mid-content p {
+    font-size: 30px !important;
+
+  }
+  .usu-heading-orange {
+    font-size: 40px !important;
+  }
+  .usu-products-black {
+	  font-size: 40px !important;
+	  }
+	  .usu-pdt {
+	  font-size: 43px !important;
+  }
+	  .usu-login-heading{
+	  font-size: 45px !important;
+  }
+  .usu-bottle-width {
+    width: 110px !important;
+}
+.usu-products-img-other {
+    width: 140px !important;
+}
+  .usu-products-parag {
+    font-size: 16px !important;
+	margin-top: 15px !important;
+}
+.usu-products-parag2 {
+    font-size: 14px !important;
+  }
+.footer_coman h4 {
+    font-size: 15px !important;
+ }
+ .footer_coman a{
+	 font-size: 16px !important;
+}
+.navbar-default .navbar-nav>li>a {
+		font-size: 12px !important;
+ }
+	 .sub-menu1 li a{
+		 font-size: 10px !important;
+ }
+ .sub_own select option {
+		  font-size: 12px !important;
+	 }
+	 .objecturl {
+    height: 700px !important;
+}
+
+}
+ 
+@media (min-width: 1920px){
+.lh25px{
+	line-height: 34px !important;
+}
+
+	.section_frst_sp{
+			height: 750px !important;
+		}
+	.wid_50px{
+		width: 80px !important;
+	}
+	.faq_accor .panel-title {	
+  padding: 10px 55px !important;
+}
+	.faqhe{
+		font-size: 34px !important;
+	 }
+	.fz29{
+	font-size: 29px !important;
+}
+.fz20{
+	font-size: 20px !important;
+}
+.procut {
+   	max-width: 750px !important;
+}	
+.addot .checkmark:after {
+ 	top: 14px !important;
+	left: 14px !important;
+	width: 14px !important;
+	height: 14px !important;
+}
+.addot{
+	margin-bottom: 20px !important;
+}
+.addot .checkmark {
+  left: -11px !important;
+  height: 40px !important;
+  width: 40px !important;
+ }
+ .addot .checkmark_img {
+  height: 40px !important;
+  width: 40px !important;
+ }
+.colorf{
+	font-size: 9px !important;
+}
+ .ucdls{
+	 max-width: 250px !important;
+ }
+.usu-rp{
+	font-size: 14px !important;
+	}
+.fweb{
+		font-size: 16px !important;
+	 }
+.usu-font-size{
+	font-size: 15px !important;
+}
+.product_desc{
+	height: 680px !important;
+}
+.learn_more_margin1{
+	margin-top: 100px !important;
+}
+.usu-product-text {
+    margin: 10px 10px !important;
+    padding: 5px!important;
+}
+.w-100 {
+     max-width: 550px !important;
+}
+.w-100-logo {
+    max-width: 200px !important;
+}
+.carousel-thumbnails .carousel-indicators img {
+    max-width: 220px !important;
+}
+.carousel-thumbnails .carousel-indicators li {
+	width: 220px !important;
+    max-width: 220px !important;
+	padding: 0px 20px !important;
+}
+.access-note{
+	font-size: 8px !important;
+}
+.usu-how-it-work-mob-icon{
+	max-width: 160px !important;
+}
+.radio_payment_img1{
+	max-width: 90px !important;
+}
+.radio_payment_img2{
+	max-width: 60px !important;
+}
+.usu-footwear-popup-form-container input[type=text], input[type=password] {
+		font-size: 13px !important;
+	}
+	.forgot-text-font{
+	font-size: 13px !important;
+}
+.usu-padding-item{
+	padding-bottom: 16px !important;
+}
+.usu-flex-total1{
+		 bottom: 50px !important;
+	}
+.usu-flex-total2{
+	 bottom: 50px !important;
+}
+.usu-basket-images{
+	min-width: 207px !important;
+}
+	 
+	 .usu-label-font{
+	font-size: 18px !important;
+}
+
+.usu-button-font{
+	 font-size: 16px !important;
+}
+	
+.usu-left-text-padding {
+    padding: 50px 0px 0px 390px !important;
+}
+.usu-right-text-padding {
+    padding: 20px 300px 20px 20px !important;
+}
+ .usu-slider-top-left p {
+    font-size: 132px !important;
+ }
+.usu-slider-para-div{
+	font-size: 11px !important;
+}
+.owl-nav .owl-prev{
+		 font-size: 80px !important;
+	 }
+	 .owl-nav .owl-next{
+		 font-size: 80px !important;
+	 }
+.usu_shoes_description{
+	padding-left: 180px !important;
+}
+
+.premium-materials-padding {
+    padding: 20px 180px !important;
+}
+.navbar {
+margin-bottom: 10px !important;
+}
+.basket_icon {
+     padding: 25px 30px !important;
+}
+ .usu-caption-text-on-imgh2 {
+      font-size: 70px !important;
+  }
+  .usu-caption-text-on-product{
+	   font-size: 60px !important;
+  }
+  .product-logo-big {
+    max-width: 900px !important;
+}
+  .usu-caption-text-on-imgh3 {
+    font-size: 34px !important;
+   }
+
+.text_banner {
+	top: 250px !important;
+}
+.usu-mid-content p {
+    font-size: 34px !important;
+  }
+  .usu-heading-orange {
+    font-size: 45px !important;
+  }
+  .usu-products-black {
+	  font-size: 45px !important;
+  }
+  .usu-pdt {
+	  font-size: 48px !important;
+  }
+  .usu-login-heading{
+	  font-size: 50px !important;
+  }
+  .usu-products-parag {
+    font-size: 18px !important;
+	}
+.usu-bottle-width {
+    width: 120px !important;
+}
+.usu-products-img-other {
+    width: 150px !important;
+}
+.usu-products-parag2 {
+    font-size: 16px !important;
+ }
+.usu-not-at-all {
+    padding: 100px 10px !important;
+}
+.hero-playlist {
+    margin-top: 100px !important;
+}
+ 
+.usu-but-at-all-sub-div {
+    margin-top: 100px !important;
+    /* padding: 0px 100px 100px; */
+}
+
+.usu_footwear_menu {
+   width: 112% !important;
+}
+.objecturl {
+    height: 800px !important;
+}
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1720px !important;
+}
+
+}
+@media (min-width: 2560px){ 
+.section_frst_sp{
+	height: 850px !important;
+}
+.faq_accor .panel-title {	
+  padding: 10px 60px !important;
+}
+.faqhe{
+		font-size: 38px !important;
+	 }
+.fz29{
+	font-size: 33px !important;
+}
+.fz20{
+	font-size: 22px !important;
+}
+.procut {
+   	max-width: 850px !important;
+}
+.addot .checkmark:after {
+ 	top: 16px !important;
+	left: 16px !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+.addot{
+	margin-bottom: 25px !important;
+}
+.addot .checkmark {
+  left: -13px !important;
+  height: 45px !important;
+  width: 45px !important;
+ }
+ .addot .checkmark_img {
+  height: 45px !important;
+  width: 45px !important;
+ }
+.colorf{
+	font-size: 10px !important;
+}
+ .ucdls{
+	 max-width: 200px !important;
+ }
+.usu-rp{
+	font-size: 15px !important;
+	}
+.fweb{
+		font-size: 17px !important;
+	 }
+.product_desc{
+	height: 730px !important;
+}
+.learn_more_margin1{
+	margin-top: 120px !important;
+}
+.access-note{
+	font-size: 9px !important;
+}
+.usu-footwear-popup-form-container input[type=text], input[type=password] {
+		font-size: 14px !important;
+	}
+	.forgot-text-font{
+	font-size: 14px !important;
+}
+.usu-basket-images{
+	min-width: 220px !important;
+}
+	 
+	 .usu-label-font{
+	font-size: 20px !important;
+}
+
+.usu-button-font{
+	 font-size: 12px !important;
+}
+	 
+.usu-slider-top-left p {
+    font-size: 155px !important;
+  }
+.usu_footwear_menu {
+   width: 118% !important;
+}
+.usu-caption-text-on-imgh2 {
+    font-size: 110px !important;
+}
+.usu-caption-text-on-product{
+	   font-size: 100px !important;
+  }
+  .objecturl {
+    height: 850px !important;
+}
+.font_size_13{
+	font-size: 16px !important;
+}
+
+
+}

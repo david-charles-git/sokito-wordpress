@@ -1,0 +1,40 @@
+@import '../theme.scss';
+
+.uspBanner {
+  padding: 0 $gutter-x;
+
+  > .inner {
+    max-width: $max-content-width-inner;
+    text-align: center;
+    padding: clamp(20px, 4vw, 80px) 0;
+    border-top: 2px solid $color-light-grey;
+
+    > .content {
+      display: inline-block;
+      width: auto;
+      text-align: left;
+
+      h3 {
+        display: inline;
+        font-family: Gza;
+        font-size: clamp(26px, 3vw, 28px);
+        font-weight: 600;
+      }
+
+      p {
+        display: inline;
+        font-family: 'Univers LT Roman';
+        font-size: 16px;
+
+        a {
+          color: $color-orange;
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: $color-dark-orange;
+          }
+        }
+      }
+    }
+  }
+}

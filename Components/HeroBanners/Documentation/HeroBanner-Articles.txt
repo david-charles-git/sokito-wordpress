@@ -1,0 +1,55 @@
+HeroBanner-liveCoverageArticles : 
+
+    Assests / Information Required :
+        Font files in woff and woff2 formats for the dispaly font (Gza) and the body font (Ubivers LT Std) - the style guide claims they are on google fonts but they are not there as far as I can see - additioanlly self hosting fonts is better for GDPR and page speed.
+        A list of known taxonomies for live coverage articles.
+        What is the functionality of the taxonomy buttons? The expected functionality of these buttons is to link to a page that contains all the post type items that include the selected taxonomy.
+        More information on the tags (the News / Read bit) - where am I getting the data from, a preexisting field or a custom field, a taxonomy? Is it the read time as that is required data for this post type from what I can see in the design of these items in feeds. do they have functionality? should they link anywhere and have a hover state?
+
+
+    Requiremnts :
+        container :
+            The padding on desktop and tablet (881px +) is as follows : 250px top and 50px bottom.
+            The padding on mobile (880x -) is as follows : 120px top and 20px bottom.
+            The max width of the content is as per style guide (1350px)
+        
+        background image :
+            The background is set to cover the entire hero banner and will therefor strecth if image is too small. Additioanlly the image is centered vertically and horixontally.
+            The background container hosts an overlay-dark element with it's opacity set to 50%
+            Background image should be in the webp format for optimized compressions and download speeds
+
+        taxonomy buttons :
+            These buttons have the font-small class in addition to being set to be all uppercase.
+            The container for the taxonomies will only show one full line of taxonmies, any others will be hidden.
+            The taxonomy buttons have a hover state that changes the text from the taxonomy name to the post type name. the transition time for this is 500ms.            
+            The taxonmies will be created and selectable in the cms.
+            The color of the taxonomy buttons is light grey (#EBEBEB).
+
+            CONCERNS :
+                The hover functionality of the buttons will likely cause an issue - if the initial taxonomy name is shorter in length than the post type name, then on hover either the post type name will overlap the container, or the container will need to expand and that may lead to other containers being pushed off the first line and disappearing briefly leading to a messy UI. - I would recommend changing this functionality.
+
+        title :
+            This will need to be a h1 tag - the font size of a h1 in the style guide is too large for this container, therefore I have given it the class font-h2 to make it the given font sizes of a h2 element (see style guide)
+            The container for the title will only show upto three lines of text.
+            The max width of this container is 920px
+            The color of the title is white (#ffffff)
+
+        details :
+            The details container hosts two elements: a date element and a container for the tags.
+            Both the date and the tags have the class of font-small
+            The date has a color of light grey (#EBEBEB) and in the format : Month day, year
+            The tags have a color of dark grey (#BFBFBF) and the container will only show up to two lines of tags, the rest will be hidden
+            the tags are visible only on desktop and tablet widths
+
+    Variables Required ( for dev ) :
+        hasCustomClass
+        customclass
+        backgroundImage
+        backgroundColor
+        hasOverlay
+        title
+
+        [ Taxonomy array is taken from the taxonomy selector ]
+        [ The date will taken from the published date seelctor ]
+
+        ** More information required for tags **
